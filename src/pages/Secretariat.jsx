@@ -5,7 +5,7 @@ const Secretariat = () => {
         {
             role: 'Secretary General',
             name: '[Name Placeholder]',
-            bio: 'Leading SMUN 2025 with a vision for diplomatic excellence and impactful discourse.',
+            bio: 'Leading SMUN 2026 with a vision for diplomatic excellence and impactful discourse.',
             photo: null,
         },
         {
@@ -33,6 +33,18 @@ const Secretariat = () => {
             photo: null,
         },
         {
+            role: 'Director General — Finance',
+            name: '[Name Placeholder]',
+            bio: 'Managing financial operations and ensuring sustainable resource allocation.',
+            photo: null,
+        },
+        {
+            role: 'Director General — Communications',
+            name: '[Name Placeholder]',
+            bio: 'Crafting the narrative of SMUN and managing all official communications.',
+            photo: null,
+        },
+        {
             role: 'Editor-in-Chief',
             name: '[Name Placeholder]',
             bio: 'Curating the narrative of SMUN through official publications and communications.',
@@ -45,7 +57,7 @@ const Secretariat = () => {
             {/* Hero */}
             <section className="secretariat-hero">
                 <div className="container">
-                    <span className="secretariat-hero__eyebrow font-accent">The Team Behind SMUN 2025</span>
+                    <span className="secretariat-hero__eyebrow font-accent">The Team Behind SMUN 2026</span>
                     <h1 className="secretariat-hero__title">The Secretariat</h1>
                     <p className="secretariat-hero__subtitle">
                         Meet the dedicated individuals leading Sanskriti Model United Nations,
@@ -92,7 +104,7 @@ const Secretariat = () => {
                             <h2>Letters from the Leadership</h2>
                             <p>
                                 Read personal messages from our secretariat members about their vision
-                                for SMUN 2025 and their commitment to delegate excellence.
+                                for SMUN 2026 and their commitment to delegate excellence.
                             </p>
                         </div>
                         <div className="letter-cta__decoration">

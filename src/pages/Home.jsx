@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -16,6 +17,32 @@ const Home = () => {
         { number: '5', label: 'International Partners' },
     ];
 
+    // Countdown to April 22, 2026
+    const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+    useEffect(() => {
+        const targetDate = new Date('April 22, 2026 00:00:00').getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance > 0) {
+                setCountdown({
+                    days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                    minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                    seconds: Math.floor((distance % (1000 * 60)) / 1000),
+                });
+            }
+        };
+
+        updateCountdown();
+        const interval = setInterval(updateCountdown, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="home">
             {/* Hero Section */}
@@ -26,6 +53,10 @@ const Home = () => {
                 </div>
 
                 <div className="hero__content">
+                    <div className="hero__logo-wrapper">
+                        <img src="/SMUN LOGO - NO BG.png" alt="SMUN Logo" className="hero__logo" />
+                    </div>
+
                     <div className="hero__badge font-accent">
                         <span className="hero__badge-icon">◈</span>
                         Welcome to
@@ -38,8 +69,31 @@ const Home = () => {
 
                     <div className="hero__date">
                         <div className="hero__date-line"></div>
-                        <span className="hero__date-text font-accent">April 22–24, 2025</span>
+                        <span className="hero__date-text font-accent">April 22–24, 2026</span>
                         <div className="hero__date-line"></div>
+                    </div>
+
+                    {/* Countdown Timer */}
+                    <div className="countdown">
+                        <div className="countdown__item">
+                            <span className="countdown__number">{countdown.days}</span>
+                            <span className="countdown__label">Days</span>
+                        </div>
+                        <div className="countdown__separator">:</div>
+                        <div className="countdown__item">
+                            <span className="countdown__number">{String(countdown.hours).padStart(2, '0')}</span>
+                            <span className="countdown__label">Hours</span>
+                        </div>
+                        <div className="countdown__separator">:</div>
+                        <div className="countdown__item">
+                            <span className="countdown__number">{String(countdown.minutes).padStart(2, '0')}</span>
+                            <span className="countdown__label">Minutes</span>
+                        </div>
+                        <div className="countdown__separator">:</div>
+                        <div className="countdown__item">
+                            <span className="countdown__number">{String(countdown.seconds).padStart(2, '0')}</span>
+                            <span className="countdown__label">Seconds</span>
+                        </div>
                     </div>
 
                     <p className="hero__subtitle">
@@ -54,11 +108,6 @@ const Home = () => {
                             Meet the Secretariat
                         </Link>
                     </div>
-                </div>
-
-                <div className="hero__scroll-indicator">
-                    <span>Scroll</span>
-                    <div className="hero__scroll-line"></div>
                 </div>
             </section>
 
