@@ -39,6 +39,78 @@
     animation: fadeInUp 1s ease forwards;
 }
 
+.hero__logo-wrapper {
+    margin-bottom: var(--space-8);
+}
+
+.hero__logo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.countdown__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown__number {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 600;
+    color: var(--color-orange);
+    line-height: 1;
+}
+
+.countdown__label {
+    font-family: var(--font-accent);
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-cream);
+    opacity: 0.7;
+    margin-top: var(--space-1);
+}
+
+.countdown__separator {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    color: var(--color-orange);
+    opacity: 0.5;
+    margin-top: -1rem;
+}
+
+@media (max-width: 576px) {
+    .countdown {
+        gap: var(--space-2);
+    }
+
+    .countdown__item {
+        min-width: 60px;
+    }
+
+    .countdown__number {
+        font-size: var(--text-2xl);
+    }
+
+    .countdown__separator {
+        font-size: var(--text-xl);
+    }
+}
+
 .hero__badge {
     display: inline-flex;
     align-items: center;

@@ -45,22 +45,23 @@ const Navbar = () => {
       <div className="navbar__container">
         {/* Logo */}
         <Link to="/" className="navbar__logo">
+          <img src="/SMUN LOGO - NO BG.png" alt="SMUN" className="navbar__logo-img" />
           <span className="navbar__logo-text">SMUN</span>
-          <span className="navbar__logo-year">2025</span>
+          <span className="navbar__logo-year">2026</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="navbar__nav hide-mobile">
           <ul className="navbar__list">
             {navLinks.map((link) => (
-              <li 
-                key={link.name} 
+              <li
+                key={link.name}
                 className={`navbar__item ${link.hasDropdown ? 'navbar__item--dropdown' : ''}`}
                 onMouseEnter={() => link.hasDropdown && setIsCommitteesOpen(true)}
                 onMouseLeave={() => link.hasDropdown && setIsCommitteesOpen(false)}
               >
-                <Link 
-                  to={link.path} 
+                <Link
+                  to={link.path}
                   className={`navbar__link ${location.pathname === link.path ? 'navbar__link--active' : ''}`}
                 >
                   {link.name}
@@ -76,8 +77,8 @@ const Navbar = () => {
                   <div className={`navbar__dropdown ${isCommitteesOpen ? 'navbar__dropdown--open' : ''}`}>
                     <div className="navbar__dropdown-content">
                       {committees.map((committee) => (
-                        <Link 
-                          key={committee.name} 
+                        <Link
+                          key={committee.name}
                           to={committee.path}
                           className="navbar__dropdown-item"
                         >
@@ -93,7 +94,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="navbar__mobile-toggle hide-desktop"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
@@ -113,16 +114,16 @@ const Navbar = () => {
             <li key={link.name} className="navbar__mobile-item">
               {link.hasDropdown ? (
                 <>
-                  <button 
+                  <button
                     className="navbar__mobile-link"
                     onClick={() => setIsCommitteesOpen(!isCommitteesOpen)}
                   >
                     {link.name}
-                    <svg 
-                      className={`navbar__chevron ${isCommitteesOpen ? 'navbar__chevron--open' : ''}`} 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className={`navbar__chevron ${isCommitteesOpen ? 'navbar__chevron--open' : ''}`}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
                       strokeWidth="2"
                     >
                       <path d="M6 9l6 6 6-6" />
@@ -130,7 +131,7 @@ const Navbar = () => {
                   </button>
                   <div className={`navbar__mobile-dropdown ${isCommitteesOpen ? 'navbar__mobile-dropdown--open' : ''}`}>
                     {committees.map((committee) => (
-                      <Link 
+                      <Link
                         key={committee.name}
                         to={committee.path}
                         className="navbar__mobile-dropdown-item"
