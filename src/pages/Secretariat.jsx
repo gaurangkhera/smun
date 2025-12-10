@@ -5,50 +5,75 @@ const Secretariat = () => {
         {
             role: 'Secretary General',
             name: '[Name Placeholder]',
-            bio: 'Leading SMUN 2026 with a vision for diplomatic excellence and impactful discourse.',
             photo: null,
         },
         {
             role: 'Deputy Secretary General',
             name: '[Name Placeholder]',
-            bio: 'Supporting the Secretary General in orchestrating a seamless and enriching conference experience.',
             photo: null,
         },
         {
-            role: 'Director General — Committees',
+            role: 'Director General - Committees',
             name: '[Name Placeholder]',
-            bio: 'Overseeing committee operations and ensuring academic rigor across all simulations.',
             photo: null,
         },
         {
-            role: 'Director General — Conference',
+            role: 'Director General - Committees',
             name: '[Name Placeholder]',
-            bio: 'Managing conference logistics and creating an exceptional delegate experience.',
             photo: null,
         },
         {
-            role: 'Director General — Outreach',
+            role: 'Director General - Conference',
             name: '[Name Placeholder]',
-            bio: 'Building partnerships and expanding the SMUN community across the nation.',
             photo: null,
         },
         {
-            role: 'Director General — Finance',
+            role: 'Director General - Conference',
             name: '[Name Placeholder]',
-            bio: 'Managing financial operations and ensuring sustainable resource allocation.',
             photo: null,
         },
         {
-            role: 'Director General — Communications',
+            role: 'Director General - Outreach',
             name: '[Name Placeholder]',
-            bio: 'Crafting the narrative of SMUN and managing all official communications.',
             photo: null,
         },
         {
             role: 'Editor-in-Chief',
             name: '[Name Placeholder]',
-            bio: 'Curating the narrative of SMUN through official publications and communications.',
             photo: null,
+        },
+    ];
+
+    const messages = [
+        {
+            role: 'Secretary General',
+            title: 'Message from the Secretary General',
+            content: 'Coming soon...',
+        },
+        {
+            role: 'Deputy Secretary General',
+            title: 'Message from the Deputy Secretary General',
+            content: 'Coming soon...',
+        },
+        {
+            role: 'Director General - Committees',
+            title: 'Message from the Director General - Committees',
+            content: 'Coming soon...',
+        },
+        {
+            role: 'Director General - Conference',
+            title: 'Message from the Director General - Conference',
+            content: 'Coming soon...',
+        },
+        {
+            role: 'Director General - Outreach',
+            title: 'Message from the Director General - Outreach',
+            content: 'Coming soon...',
+        },
+        {
+            role: 'Editor-in-Chief',
+            title: 'Message from the Editor-in-Chief',
+            content: 'Coming soon...',
         },
     ];
 
@@ -57,12 +82,8 @@ const Secretariat = () => {
             {/* Hero */}
             <section className="secretariat-hero">
                 <div className="container">
-                    <span className="secretariat-hero__eyebrow font-accent">The Team Behind SMUN 2026</span>
                     <h1 className="secretariat-hero__title">The Secretariat</h1>
-                    <p className="secretariat-hero__subtitle">
-                        Meet the dedicated individuals leading Sanskriti Model United Nations,
-                        committed to fostering leadership and diplomatic excellence.
-                    </p>
+                    <p className="secretariat-hero__subtitle">SMUN 2026</p>
                 </div>
             </section>
 
@@ -85,31 +106,26 @@ const Secretariat = () => {
                                     )}
                                 </div>
                                 <div className="member-card__content">
-                                    <span className="member-card__role font-accent">{member.role}</span>
                                     <h3 className="member-card__name">{member.name}</h3>
-                                    <p className="member-card__bio">{member.bio}</p>
+                                    <span className="member-card__role">{member.role}</span>
                                 </div>
-                                <div className="member-card__decoration"></div>
                             </div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Letter Section */}
-            <section className="secretariat-letter section">
+            {/* Messages Section */}
+            <section className="secretariat-messages section-lg">
                 <div className="container">
-                    <div className="letter-cta">
-                        <div className="letter-cta__content">
-                            <h2>Letters from the Leadership</h2>
-                            <p>
-                                Read personal messages from our secretariat members about their vision
-                                for SMUN 2026 and their commitment to delegate excellence.
-                            </p>
-                        </div>
-                        <div className="letter-cta__decoration">
-                            <div className="letter-cta__icon">✦</div>
-                        </div>
+                    <h2 className="secretariat-messages__title">Messages from the Secretariat</h2>
+                    <div className="secretariat-messages__grid">
+                        {messages.map((message, index) => (
+                            <div key={index} className="message-card" id={message.role.toLowerCase().replace(/\s+/g, '-')}>
+                                <h3 className="message-card__title">{message.title}</h3>
+                                <p className="message-card__content">{message.content}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

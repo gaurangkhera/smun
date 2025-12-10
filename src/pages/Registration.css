@@ -1,0 +1,32 @@
+/* ===================================
+   Registration Hero
+   =================================== */
+.registration-hero {
+    padding: var(--space-32) 0 var(--space-16);
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-navy-medium) 0%, var(--color-navy-deep) 100%);
+    position: relative;
+}
+
+.registration-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-orange), transparent);
+}
+
+.registration-hero__title {
+    font-size: var(--text-5xl);
+    color: var(--color-cream);
+    margin-bottom: var(--space-4);
+}
+
+.registration-hero__subtitle {
+    font-family: var(--font-accent);
+    font-size: var(--text-lg);
+    letter-spacing: 0.2em;
+    color: var(--color-orange);
+}
