@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isCommitteesOpen, setIsCommitteesOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,26 +18,28 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
-    setIsCommitteesOpen(false);
+    setActiveDropdown(null);
   }, [location]);
 
-  const committees = [
-    { name: 'General Assembly', path: '/committees/ga' },
-    { name: 'UN Security Council', path: '/committees/unsc' },
-    { name: 'Semi Crisis Committee', path: '/committees/semi' },
-    { name: 'Humanitarian Committee', path: '/committees/humanitarian' },
-    { name: 'Crisis Committee', path: '/committees/crisis' },
-    { name: 'Indian Parliament', path: '/committees/indian' },
-    { name: 'Specialized Committee', path: '/committees/specialized' },
-    { name: 'UNCA', path: '/committees/unca' },
+  const letterLinks = [
+    { name: 'Letter | Secretary General', path: '/secretariat/letter/sg' },
+    { name: 'Letter | Deputy Secretary General', path: '/secretariat/letter/dsg' },
+    { name: 'Letter | Director General - Committees', path: '/secretariat/letter/dg-committees' },
+    { name: 'Letter | Director General - Conference', path: '/secretariat/letter/dg-conference' },
+    { name: 'Letter | Director General Outreach', path: '/secretariat/letter/dg-outreach' },
+    { name: 'Letter | Editor-in-Chief', path: '/secretariat/letter/eic' },
   ];
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Secretariat', path: '/secretariat' },
-    { name: 'Committees', path: '/committees', hasDropdown: true },
-    { name: 'Sponsors', path: '/sponsors' },
-    { name: 'Contact', path: '/contact' },
+    {
+      name: 'Secretariat 2026',
+      path: '/secretariat',
+      dropdown: letterLinks
+    },
+    { name: 'Committees', path: '/committees' },
+    { name: 'Conference Details', path: '/conference-details' },
+    { name: 'Contact Us', path: '/contact' },
   ];
 
   return (
@@ -46,8 +48,6 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="navbar__logo">
           <img src="/SMUN LOGO - NO BG.png" alt="SMUN" className="navbar__logo-img" />
-          <span className="navbar__logo-text">SMUN</span>
-          <span className="navbar__logo-year">2026</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -56,33 +56,33 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <li
                 key={link.name}
-                className={`navbar__item ${link.hasDropdown ? 'navbar__item--dropdown' : ''}`}
-                onMouseEnter={() => link.hasDropdown && setIsCommitteesOpen(true)}
-                onMouseLeave={() => link.hasDropdown && setIsCommitteesOpen(false)}
+                className={`navbar__item ${link.dropdown ? 'navbar__item--dropdown' : ''}`}
+                onMouseEnter={() => link.dropdown && setActiveDropdown(link.name)}
+                onMouseLeave={() => link.dropdown && setActiveDropdown(null)}
               >
                 <Link
                   to={link.path}
-                  className={`navbar__link ${location.pathname === link.path ? 'navbar__link--active' : ''}`}
+                  className={`navbar__link ${location.pathname === link.path || location.pathname.startsWith(link.path + '/') ? 'navbar__link--active' : ''}`}
                 >
                   {link.name}
-                  {link.hasDropdown && (
+                  {link.dropdown && (
                     <svg className="navbar__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M6 9l6 6 6-6" />
                     </svg>
                   )}
                 </Link>
 
-                {/* Dropdown for Committees */}
-                {link.hasDropdown && (
-                  <div className={`navbar__dropdown ${isCommitteesOpen ? 'navbar__dropdown--open' : ''}`}>
+                {/* Dropdown */}
+                {link.dropdown && (
+                  <div className={`navbar__dropdown ${activeDropdown === link.name ? 'navbar__dropdown--open' : ''}`}>
                     <div className="navbar__dropdown-content">
-                      {committees.map((committee) => (
+                      {link.dropdown.map((item) => (
                         <Link
-                          key={committee.name}
-                          to={committee.path}
+                          key={item.name}
+                          to={item.path}
                           className="navbar__dropdown-item"
                         >
-                          {committee.name}
+                          {item.name}
                         </Link>
                       ))}
                     </div>
@@ -112,31 +112,35 @@ const Navbar = () => {
         <ul className="navbar__mobile-list">
           {navLinks.map((link) => (
             <li key={link.name} className="navbar__mobile-item">
-              {link.hasDropdown ? (
+              {link.dropdown ? (
                 <>
-                  <button
-                    className="navbar__mobile-link"
-                    onClick={() => setIsCommitteesOpen(!isCommitteesOpen)}
-                  >
-                    {link.name}
-                    <svg
-                      className={`navbar__chevron ${isCommitteesOpen ? 'navbar__chevron--open' : ''}`}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
+                  <div className="navbar__mobile-link-group">
+                    <Link to={link.path} className="navbar__mobile-link">
+                      {link.name}
+                    </Link>
+                    <button
+                      className="navbar__mobile-toggle-dropdown"
+                      onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
                     >
-                      <path d="M6 9l6 6 6-6" />
-                    </svg>
-                  </button>
-                  <div className={`navbar__mobile-dropdown ${isCommitteesOpen ? 'navbar__mobile-dropdown--open' : ''}`}>
-                    {committees.map((committee) => (
+                      <svg
+                        className={`navbar__chevron ${activeDropdown === link.name ? 'navbar__chevron--open' : ''}`}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className={`navbar__mobile-dropdown ${activeDropdown === link.name ? 'navbar__mobile-dropdown--open' : ''}`}>
+                    {link.dropdown.map((item) => (
                       <Link
-                        key={committee.name}
-                        to={committee.path}
+                        key={item.name}
+                        to={item.path}
                         className="navbar__mobile-dropdown-item"
                       >
-                        {committee.name}
+                        {item.name}
                       </Link>
                     ))}
                   </div>

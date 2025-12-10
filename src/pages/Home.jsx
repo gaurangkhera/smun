@@ -3,20 +3,6 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
-    const newsletters = [
-        { name: 'Pre-Conference', url: 'https://heyzine.com/flip-book/080ee43b31.html' },
-        { name: 'Day 1', url: 'https://heyzine.com/flip-book/b662142d13.html' },
-        { name: 'Day 2', url: 'https://heyzine.com/flip-book/88e6e57f14.html' },
-        { name: 'Day 3', url: 'https://heyzine.com/flip-book/b79d23715c.html' },
-    ];
-
-    const stats = [
-        { number: '14+', label: 'Years of Excellence' },
-        { number: '500+', label: 'Delegates Hosted' },
-        { number: '8', label: 'Committees' },
-        { number: '5', label: 'International Partners' },
-    ];
-
     // Countdown to April 22, 2026
     const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
@@ -43,6 +29,13 @@ const Home = () => {
         return () => clearInterval(interval);
     }, []);
 
+    const stats = [
+        { number: '14+', label: 'Years of Excellence' },
+        { number: '500+', label: 'Delegates Hosted' },
+        { number: '10', label: 'Committees' },
+        { number: '5', label: 'International Partners' },
+    ];
+
     return (
         <div className="home">
             {/* Hero Section */}
@@ -55,11 +48,6 @@ const Home = () => {
                 <div className="hero__content">
                     <div className="hero__logo-wrapper">
                         <img src="/SMUN LOGO - NO BG.png" alt="SMUN Logo" className="hero__logo" />
-                    </div>
-
-                    <div className="hero__badge font-accent">
-                        <span className="hero__badge-icon">◈</span>
-                        Welcome to
                     </div>
 
                     <h1 className="hero__title">
@@ -97,7 +85,7 @@ const Home = () => {
                     </div>
 
                     <p className="hero__subtitle">
-                        Developing commanding leaders through dialogue, diplomacy, and collaborative discourse
+                        Knowledge is Liberation
                     </p>
 
                     <div className="hero__actions">
@@ -127,8 +115,8 @@ const Home = () => {
             <section className="about section-lg">
                 <div className="container">
                     <div className="about__header">
-                        <span className="about__eyebrow font-accent">The SMUN Vision</span>
-                        <h2 className="about__title">Leadership Through Collaboration</h2>
+                        <span className="about__eyebrow font-accent">The Sanskriti Motto</span>
+                        <h2 className="about__title">Knowledge is Liberation</h2>
                         <div className="about__ornament">
                             <div className="about__ornament-line"></div>
                             <div className="about__ornament-diamond"></div>
@@ -139,75 +127,30 @@ const Home = () => {
                     <div className="about__content">
                         <div className="about__text">
                             <p>
-                                In its most clinical sense, the goal of Model UN is to provide an accurate simulation
-                                of the real United Nations. It is this task of realistically simulating the workings
-                                of an organization composed of almost every sovereign nation in the world that forces
-                                delegates to learn the intricacies of state policies and principles.
+                                In its most clinical sense, the goal of Model United Nations is to simulate the great
+                                global issues that shape our world. By recreating the complexity of international affairs
+                                with care and imagination, delegates are encouraged to explore the intricacies of statecraft,
+                                to understand diverse perspectives and to discover how meaningful dialogue becomes the
+                                foundation of real problem solving.
                             </p>
                             <p>
-                                Model United Nations at Sanskriti began <strong>14 years ago</strong> as a student
-                                initiative to develop commanding leaders. Since our inaugural conference in 2012,
-                                Sanskriti Model United Nations has grown to become a close-knit, passionate community
-                                involved in Model UN conferences across Asia.
+                                Model United Nations at Sanskriti began fourteen years ago as a student initiative to
+                                develop commanding leaders. Since our inaugural conference in 2012, Sanskriti Model
+                                United Nations has grown to become a close knit and passionate community involved in
+                                Model UN conferences across the nation and the world.
                             </p>
                             <p>
-                                The goal of Model UN is not to dominate; it is to lead. To combine different ideas,
-                                backgrounds, and approaches; to reason, collaborate, negotiate and draw on personal
-                                experience to create something that matters—to find real solutions to real problems.
+                                The purpose of Model UN is not to dominate, it is to lead. It calls upon delegates to
+                                think with clarity, listen with empathy and collaborate with conviction. It is here that
+                                our motto, <strong>Knowledge is Liberation</strong>, reveals its deepest truth. Knowledge
+                                frees us from the limits of assumption, elevates our understanding and empowers us to
+                                create ideas that honour both reason and humanity. In this shared pursuit, we learn not
+                                only about the world but also about the leaders we can become.
+                            </p>
+                            <p className="about__closing">
+                                We look forward to seeing you in April!
                             </p>
                         </div>
-
-                        <div className="about__highlights">
-                            <div className="about__highlight-card">
-                                <div className="about__highlight-icon">◆</div>
-                                <h4>Critical Thinking</h4>
-                                <p>Developing analytical minds equipped to navigate complex global challenges</p>
-                            </div>
-                            <div className="about__highlight-card">
-                                <div className="about__highlight-icon">◆</div>
-                                <h4>Diplomatic Excellence</h4>
-                                <p>Mastering the art of negotiation, debate, and international discourse</p>
-                            </div>
-                            <div className="about__highlight-card">
-                                <div className="about__highlight-icon">◆</div>
-                                <h4>Global Perspective</h4>
-                                <p>Understanding diverse viewpoints that form the foundation of the United Nations</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Newsletter Section */}
-            <section className="newsletters section">
-                <div className="container">
-                    <div className="newsletters__header">
-                        <span className="newsletters__eyebrow font-accent">Conference Archives</span>
-                        <h2 className="newsletters__title">Official Newsletters</h2>
-                        <p className="newsletters__description">
-                            Explore the official newsletters released throughout the conference,
-                            capturing main events and the very essence of SMUN.
-                        </p>
-                    </div>
-
-                    <div className="newsletters__grid">
-                        {newsletters.map((newsletter, index) => (
-                            <a
-                                key={index}
-                                href={newsletter.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="newsletter-card"
-                            >
-                                <div className="newsletter-card__number">{String(index + 1).padStart(2, '0')}</div>
-                                <h3 className="newsletter-card__title">{newsletter.name}</h3>
-                                <div className="newsletter-card__arrow">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                                    </svg>
-                                </div>
-                            </a>
-                        ))}
                     </div>
                 </div>
             </section>
