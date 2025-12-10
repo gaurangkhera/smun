@@ -71,6 +71,11 @@ const Secretariat = () => {
             content: 'Coming soon...',
         },
         {
+            role: 'Director General - Outreach',
+            title: 'Message from the Director General - Outreach',
+            content: 'Coming soon...',
+        },
+        {
             role: 'Editor-in-Chief',
             title: 'Message from the Editor-in-Chief',
             content: 'Coming soon...',
