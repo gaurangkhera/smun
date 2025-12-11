@@ -9,6 +9,7 @@ const Secretariat = () => {
         if (name === 'Vedant Prakash') return '/photos/vedant prakash.JPG';
         if (name === 'Vedant Beriwal') return '/photos/vedant beriwal.JPG';
         if (name === 'Vivaan Balhara') return '/photos/vivan.JPG'; // filename is vivan not vivaan
+        if (name === 'Samaira Jain') return '/photos/samaira.jpg';
 
         return `/photos/${firstName}.JPG`;
     };
@@ -16,7 +17,7 @@ const Secretariat = () => {
     // Available photos
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
-        'hrishik', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
+        'hrishik', 'krish', 'manasvi', 'prisha', 'samaira', 'shiven', 'sreeparna',
         'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan'
     ];
 
