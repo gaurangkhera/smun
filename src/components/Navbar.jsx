@@ -19,16 +19,32 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Secretariat 2026', path: '/secretariat' },
+    { name: 'Secretariat', path: '/secretariat' },
     { name: 'Committees', path: '/committees' },
     { name: 'Conference Details', path: '/conference-details' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
+  const toggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
-    <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
+    <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''} ${isMobileMenuOpen ? 'navbar--menu-open' : ''}`}>
       <div className="navbar__container">
         {/* Logo */}
         <Link to="/" className="navbar__logo">
@@ -54,8 +70,9 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <button
           className="navbar__mobile-toggle hide-desktop"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          onClick={toggleMenu}
           aria-label="Toggle menu"
+          aria-expanded={isMobileMenuOpen}
         >
           <span className={`navbar__hamburger ${isMobileMenuOpen ? 'navbar__hamburger--open' : ''}`}>
             <span></span>
