@@ -8,8 +8,6 @@ const Secretariat = () => {
         // Special cases
         if (name === 'Vedant Prakash') return '/photos/vedant prakash.JPG';
         if (name === 'Vedant Beriwal') return '/photos/vedant beriwal.JPG';
-        if (name === 'Vivaan Balhara') return '/photos/vivan.JPG'; // filename is vivan not vivaan
-        if (name === 'Samaira Jain') return '/photos/samaira.jpg';
 
         return `/photos/${firstName}.JPG`;
     };
@@ -17,15 +15,14 @@ const Secretariat = () => {
     // Available photos
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
-        'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'samaira', 'shiven', 'sreeparna',
-        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan'
+        'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira'
     ];
 
     const hasPhoto = (name) => {
         const firstName = name.split(' ')[0].toLowerCase();
         if (name === 'Vedant Prakash') return availablePhotos.includes('vedant prakash');
         if (name === 'Vedant Beriwal') return availablePhotos.includes('vedant beriwal');
-        if (name === 'Vivaan Balhara') return availablePhotos.includes('vivan');
         return availablePhotos.includes(firstName);
     };
 
@@ -71,7 +68,7 @@ const Secretariat = () => {
 
         // Justice Committee Directors
         { role: 'Justice Committee', name: 'Shiven Uppal', row: 14 },
-        { role: 'Justice Committee', name: 'Vivaan Balhara', row: 14 },
+        { role: 'Justice Committee', name: 'Vivan Balhara', row: 14 },
 
         // UNCA Journalism Directors
         { role: 'UNCA Journalism', name: 'Deeksha Singh', row: 15 },
