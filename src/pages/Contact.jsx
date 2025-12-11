@@ -4,8 +4,10 @@ const Contact = () => {
     const secretariatContacts = [
         { role: 'Secretary General', name: 'Aryaman Pragya', phone: '+91 99110 57775' },
         { role: 'Deputy Secretary General', name: 'Deeksha Singh', phone: '+91 8800923327' },
-        { role: 'Director General of Conference', name: 'Hrishik Malhotra', phone: '+91 87009 04157' },
-        { role: 'Director General of Conference', name: 'Krish Aggarwal', phone: '+91 9873744038' },
+        { role: 'Director General - Conference', name: 'Hrishik Malhotra', phone: '+91 87009 04157' },
+        { role: 'Director General - Conference', name: 'Krish Aggarwal', phone: '+91 9873744038' },
+        { role: 'Director General - Outreach', name: 'Manasvi Bhambani', phone: '+91 98930 83119' },
+        { role: 'Director General - Outreach', name: 'Vedant Prakash', phone: '+91 74391 17006' },
     ];
 
     const munCoordinators = [

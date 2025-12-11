@@ -1,86 +1,105 @@
 import './Secretariat.css';
 
 const Secretariat = () => {
-    const secretariat = [
-        {
-            role: 'Secretary General',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Deputy Secretary General',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Director General - Committees',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Director General - Committees',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Director General - Conference',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Director General - Conference',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Director General - Outreach',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
-        {
-            role: 'Editor-in-Chief',
-            name: '[Name Placeholder]',
-            photo: null,
-        },
+    // Photo mapping - first name lowercase, special cases for Vedant Prakash and Vedant Beriwal
+    const getPhotoPath = (name) => {
+        const firstName = name.split(' ')[0].toLowerCase();
+
+        // Special cases
+        if (name === 'Vedant Prakash') return '/photos/vedant prakash.JPG';
+        if (name === 'Vedant Beriwal') return '/photos/vedant beriwal.JPG';
+        if (name === 'Vivaan Balhara') return '/photos/vivan.JPG'; // filename is vivan not vivaan
+
+        return `/photos/${firstName}.JPG`;
+    };
+
+    // Available photos
+    const availablePhotos = [
+        'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
+        'hrishik', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan'
     ];
 
-    const messages = [
-        {
-            role: 'Secretary General',
-            title: 'Message from the Secretary General',
-            content: 'Coming soon...',
-        },
-        {
-            role: 'Deputy Secretary General',
-            title: 'Message from the Deputy Secretary General',
-            content: 'Coming soon...',
-        },
-        {
-            role: 'Director General - Committees',
-            title: 'Message from the Director General - Committees',
-            content: 'Coming soon...',
-        },
-        {
-            role: 'Director General - Conference',
-            title: 'Message from the Director General - Conference',
-            content: 'Coming soon...',
-        },
-        {
-            role: 'Director General - Outreach',
-            title: 'Message from the Director General - Outreach',
-            content: 'Coming soon...',
-        },
-        {
-            role: 'Director General - Outreach',
-            title: 'Message from the Director General - Outreach',
-            content: 'Coming soon...',
-        },
-        {
-            role: 'Editor-in-Chief',
-            title: 'Message from the Editor-in-Chief',
-            content: 'Coming soon...',
-        },
+    const hasPhoto = (name) => {
+        const firstName = name.split(' ')[0].toLowerCase();
+        if (name === 'Vedant Prakash') return availablePhotos.includes('vedant prakash');
+        if (name === 'Vedant Beriwal') return availablePhotos.includes('vedant beriwal');
+        if (name === 'Vivaan Balhara') return availablePhotos.includes('vivan');
+        return availablePhotos.includes(firstName);
+    };
+
+    const secretariat = [
+        // Upper Secretariat
+        { role: 'Secretary General', name: 'Aryaman Pragya', row: 1 },
+        { role: 'Deputy Secretary General', name: 'Deeksha Singh', row: 2 },
+        { role: 'Director General - Committees', name: 'Aanya Chand', row: 3 },
+        { role: 'Director General - Committees', name: 'Raghav G Rai', row: 3 },
+        { role: 'Director General - Conference', name: 'Hrishik Malhotra', row: 4 },
+        { role: 'Director General - Conference', name: 'Krish Aggarwal', row: 4 },
+        { role: 'Director General - Outreach', name: 'Manasvi Bhambani', row: 5 },
+        { role: 'Director General - Outreach', name: 'Vedant Prakash', row: 5 },
+        { role: 'Editor-in-Chief', name: 'Jayanti Yadav', row: 6 },
+
+        // General Assembly Directors
+        { role: 'General Assembly', name: 'Aanya Chand', row: 7 },
+        { role: 'General Assembly', name: 'Jai Singh', row: 7 },
+        { role: 'General Assembly', name: 'Shaurya Bannerjee', row: 7 },
+
+        // Humanitarian Committee Directors
+        { role: 'Humanitarian Committee', name: 'Aishani Purohit', row: 8 },
+        { role: 'Humanitarian Committee', name: 'Tejas Veer Singh', row: 8 },
+
+        // UNSC Director
+        { role: 'UN Security Council', name: 'Raghav Gupta Rai', row: 9 },
+
+        // Indian Committee Directors
+        { role: 'Indian Committee', name: 'Aryaman Pragya', row: 10 },
+        { role: 'Indian Committee', name: 'Vihaan Rustagi', row: 10 },
+
+        // Crisis Committee Directors
+        { role: 'Crisis Committee', name: 'Krish Aggarwal', row: 11 },
+        { role: 'Crisis Committee', name: 'Manasvi Bhambani', row: 11 },
+
+        // Semi-Crisis Committee Directors
+        { role: 'Semi-Crisis Committee', name: 'Hrishik Malhotra', row: 12 },
+        { role: 'Semi-Crisis Committee', name: 'Prashali Dayal', row: 12 },
+
+        // Specialised Committee Directors
+        { role: 'Specialised Committee', name: 'Vedant Prakash', row: 13 },
+        { role: 'Specialised Committee', name: 'Kunal Aggarwal', row: 13 },
+
+        // Justice Committee Directors
+        { role: 'Justice Committee', name: 'Shiven Uppal', row: 14 },
+        { role: 'Justice Committee', name: 'Vivaan Balhara', row: 14 },
+
+        // UNCA Journalism Directors
+        { role: 'UNCA Journalism', name: 'Deeksha Singh', row: 15 },
+        { role: 'UNCA Journalism', name: 'Aaditri Prasad', row: 15 },
+
+        // UNCA Photography Directors
+        { role: 'UNCA Photography', name: 'Shreya Singh', row: 16 },
+        { role: 'UNCA Photography', name: 'Uma Aiyar Walia', row: 16 },
+
+        // UNCA Cartoonists Directors
+        { role: 'UNCA Cartoonists', name: 'Sreeparna Mitra', row: 17 },
+        { role: 'UNCA Cartoonists', name: 'Tanvi Prabhu', row: 17 },
+
+        // Organising Committee Directors
+        { role: 'Organising Committee', name: 'Arunika Gupta', row: 18 },
+        { role: 'Organising Committee', name: 'Prisha Pandey', row: 18 },
+        { role: 'Organising Committee', name: 'Samaira Jain', row: 18 },
+        { role: 'Organising Committee', name: 'Sarah Goel', row: 19 },
+        { role: 'Organising Committee', name: 'Vedant Beriwal', row: 19 },
+
+        // Directors of Technical Operations
+        { role: 'Technical Operations', name: 'Avika Singh', row: 20 },
+        { role: 'Technical Operations', name: 'Gaurang Khera', row: 20 },
+        { role: 'Technical Operations', name: 'Sharanya Verma', row: 21 },
+        { role: 'Technical Operations', name: 'Pratik Anand', row: 21 },
     ];
+
+    // Get unique rows
+    const rows = [...new Set(secretariat.map(m => m.row))].sort((a, b) => a - b);
 
     return (
         <div className="secretariat">
@@ -95,43 +114,33 @@ const Secretariat = () => {
             {/* Secretariat Grid */}
             <section className="secretariat-grid section-lg">
                 <div className="container">
-                    <div className="secretariat-grid__container">
-                        {secretariat.map((member, index) => (
-                            <div key={index} className="member-card">
-                                <div className="member-card__photo">
-                                    {member.photo ? (
-                                        <img src={member.photo} alt={member.name} />
-                                    ) : (
-                                        <div className="member-card__placeholder">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                                                <circle cx="12" cy="8" r="4" />
-                                                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                                            </svg>
+                    {rows.map((rowNum) => {
+                        const rowMembers = secretariat.filter(m => m.row === rowNum);
+                        return (
+                            <div key={rowNum} className="secretariat-row">
+                                {rowMembers.map((member, index) => (
+                                    <div key={index} className="member-card">
+                                        <div className="member-card__photo">
+                                            {hasPhoto(member.name) ? (
+                                                <img src={getPhotoPath(member.name)} alt={member.name} />
+                                            ) : (
+                                                <div className="member-card__placeholder">
+                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                                                        <circle cx="12" cy="8" r="4" />
+                                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                                    </svg>
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
-                                </div>
-                                <div className="member-card__content">
-                                    <h3 className="member-card__name">{member.name}</h3>
-                                    <span className="member-card__role">{member.role}</span>
-                                </div>
+                                        <div className="member-card__content">
+                                            <h3 className="member-card__name">{member.name}</h3>
+                                            <span className="member-card__role">{member.role}</span>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Messages Section */}
-            <section className="secretariat-messages section-lg">
-                <div className="container">
-                    <h2 className="secretariat-messages__title">Messages from the Secretariat</h2>
-                    <div className="secretariat-messages__grid">
-                        {messages.map((message, index) => (
-                            <div key={index} className="message-card" id={message.role.toLowerCase().replace(/\s+/g, '-')}>
-                                <h3 className="message-card__title">{message.title}</h3>
-                                <p className="message-card__content">{message.content}</p>
-                            </div>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
             </section>
         </div>
