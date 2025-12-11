@@ -32,8 +32,8 @@ const Secretariat = () => {
         // Upper Secretariat
         { role: 'Secretary General', name: 'Aryaman Pragya', row: 1 },
         { role: 'Deputy Secretary General', name: 'Deeksha Singh', row: 2 },
-        { role: 'Director General - Committees', name: 'Aanya Chand', row: 3 },
         { role: 'Director General - Committees', name: 'Raghav G Rai', row: 3 },
+        { role: 'Director General - Committees', name: 'Aanya Chand', row: 3 },
         { role: 'Director General - Conference', name: 'Hrishik Malhotra', row: 4 },
         { role: 'Director General - Conference', name: 'Krish Aggarwal', row: 4 },
         { role: 'Director General - Outreach', name: 'Manasvi Bhambani', row: 5 },
