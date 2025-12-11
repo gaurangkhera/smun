@@ -1,20 +1,6 @@
 import './Committees.css';
 
 const Committees = () => {
-    const committees = [
-        'General Assembly',
-        'UN Security Council',
-        'Semi Crisis Committee',
-        'Humanitarian Committee',
-        'Crisis Committee',
-        'Indian Parliament',
-        'Specialized Committee',
-        'UNCA',
-        'UNCA-Journalists',
-        'UNCA-Cartoonists',
-        'UNCA-Photographers',
-    ];
-
     return (
         <div className="committees">
             {/* Hero */}
@@ -25,15 +11,14 @@ const Committees = () => {
                 </div>
             </section>
 
-            {/* Committees List */}
-            <section className="committees-list section-lg">
+            {/* Coming Soon */}
+            <section className="coming-soon section-lg">
                 <div className="container">
-                    <div className="committees-list__grid">
-                        {committees.map((committee, index) => (
-                            <div key={index} className="committee-item">
-                                <span className="committee-item__name">{committee}</span>
-                            </div>
-                        ))}
+                    <div className="coming-soon__content">
+                        <div className="coming-soon__icon">◈</div>
+                        <h2>Coming Soon</h2>
+                        <p>Committee details and agendas will be announced shortly.</p>
+                        <p className="coming-soon__date">Stay tuned!</p>
                     </div>
                 </div>
             </section>
