@@ -17,7 +17,7 @@ const Secretariat = () => {
     // Available photos
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
-        'hrishik', 'krish', 'manasvi', 'prisha', 'samaira', 'shiven', 'sreeparna',
+        'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'samaira', 'shiven', 'sreeparna',
         'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan'
     ];
 
