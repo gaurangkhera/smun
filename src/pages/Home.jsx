@@ -31,7 +31,7 @@ const Home = () => {
 
     const stats = [
         { number: '14+', label: 'Years of Excellence' },
-        { number: '500+', label: 'Delegates Hosted' },
+        { number: '7000+', label: 'Delegates Hosted' },
         { number: '11', label: 'Committees' },
     ];
 
