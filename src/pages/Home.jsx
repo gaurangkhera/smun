@@ -32,8 +32,7 @@ const Home = () => {
     const stats = [
         { number: '14+', label: 'Years of Excellence' },
         { number: '500+', label: 'Delegates Hosted' },
-        { number: '10', label: 'Committees' },
-        { number: '5', label: 'International Partners' },
+        { number: '11', label: 'Committees' },
     ];
 
     return (

@@ -16,7 +16,7 @@ const Secretariat = () => {
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
         'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
-        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai'
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya'
     ];
 
     const hasPhoto = (name) => {
@@ -90,9 +90,9 @@ const Secretariat = () => {
         { role: 'Organising Committee', name: 'Vedant Beriwal', row: 19 },
 
         // Directors of Technical Operations
-        { role: 'Technical Operations', name: 'Avika Singh', row: 20 },
+        { role: 'Technical Operations', name: 'Sharanya Verma', row: 20 },
         { role: 'Technical Operations', name: 'Gaurang Khera', row: 20 },
-        { role: 'Technical Operations', name: 'Sharanya Verma', row: 21 },
+        { role: 'Technical Operations', name: 'Avika Singh', row: 21 },
         { role: 'Technical Operations', name: 'Pratik Anand', row: 21 },
     ];
 
@@ -114,28 +114,36 @@ const Secretariat = () => {
                 <div className="container">
                     {rows.map((rowNum) => {
                         const rowMembers = secretariat.filter(m => m.row === rowNum);
+                        const isLastUpperSec = rowNum === 6;
                         return (
-                            <div key={rowNum} className="secretariat-row">
-                                {rowMembers.map((member, index) => (
-                                    <div key={index} className="member-card">
-                                        <div className="member-card__photo">
-                                            {hasPhoto(member.name) ? (
-                                                <img src={getPhotoPath(member.name)} alt={member.name} />
-                                            ) : (
-                                                <div className="member-card__placeholder">
-                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                                                        <circle cx="12" cy="8" r="4" />
-                                                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                                                    </svg>
-                                                </div>
-                                            )}
+                            <div key={rowNum}>
+                                <div className="secretariat-row">
+                                    {rowMembers.map((member, index) => (
+                                        <div key={index} className="member-card">
+                                            <div className="member-card__photo">
+                                                {hasPhoto(member.name) ? (
+                                                    <img src={getPhotoPath(member.name)} alt={member.name} />
+                                                ) : (
+                                                    <div className="member-card__placeholder">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                                                            <circle cx="12" cy="8" r="4" />
+                                                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                                        </svg>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="member-card__content">
+                                                <h3 className="member-card__name">{member.name}</h3>
+                                                <span className="member-card__role">{member.role}</span>
+                                            </div>
                                         </div>
-                                        <div className="member-card__content">
-                                            <h3 className="member-card__name">{member.name}</h3>
-                                            <span className="member-card__role">{member.role}</span>
-                                        </div>
+                                    ))}
+                                </div>
+                                {isLastUpperSec && (
+                                    <div className="secretariat-divider">
+                                        <span className="secretariat-divider__text">Committee Directors</span>
                                     </div>
-                                ))}
+                                )}
                             </div>
                         );
                     })}
