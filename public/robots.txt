@@ -1,0 +1,10 @@
+# Robots.txt for Sanskriti MUN
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sanskritimun.org/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
