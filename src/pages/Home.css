@@ -180,14 +180,15 @@
 }
 
 .stats__container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-8);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-16);
+    flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
     .stats__container {
-        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
     }
 }
 
