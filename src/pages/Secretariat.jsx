@@ -90,8 +90,8 @@ const Secretariat = () => {
         { role: 'Organising Committee', name: 'Vedant Beriwal', row: 19 },
 
         // Directors of Technical Operations
-        { role: 'Technical Operations', name: 'Sharanya Verma', row: 20 },
         { role: 'Technical Operations', name: 'Gaurang Khera', row: 20 },
+        { role: 'Technical Operations', name: 'Sharanya Verma', row: 20 },
         { role: 'Technical Operations', name: 'Avika Singh', row: 21 },
         { role: 'Technical Operations', name: 'Pratik Anand', row: 21 },
     ];
