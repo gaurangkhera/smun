@@ -52,6 +52,7 @@ const Footer = () => {
 
                 <div className="footer__bottom">
                     <p>© {currentYear} Sanskriti Model United Nations. All rights reserved.</p>
+                    <p className="footer__credit">Made by <a href="https://www.linkedin.com/in/gaurangkhera" target="_blank" rel="noopener noreferrer">Gaurang Khera</a></p>
                 </div>
             </div>
         </footer>

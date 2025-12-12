@@ -125,3 +125,19 @@
     color: var(--color-cream);
     opacity: 0.6;
 }
+
+.footer__credit {
+    margin-top: var(--space-2);
+    font-size: var(--text-xs) !important;
+    opacity: 1 !important;
+}
+
+.footer__credit a {
+    color: var(--color-orange);
+    opacity: 0.8;
+    transition: opacity var(--transition-base);
+}
+
+.footer__credit a:hover {
+    opacity: 1;
+}
