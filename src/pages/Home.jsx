@@ -46,12 +46,13 @@ const Home = () => {
 
                 <div className="hero__content">
                     <div className="hero__logo-wrapper">
-                        <img src="/SMUN LOGO - NO BG.png" alt="SMUN Logo" className="hero__logo" />
+                        <img src="/SMUN LOGO - NO BG.png" alt="Sanskriti MUN Logo - SMUN Delhi Model United Nations Conference" className="hero__logo" />
                     </div>
 
                     <h1 className="hero__title">
-                        <span className="hero__title-line">Sanskriti</span>
+                        <span className="hero__title-line">Sanskriti MUN</span>
                         <span className="hero__title-line hero__title-line--accent">Model United Nations</span>
+                        <span className="visually-hidden">SMUN - Delhi's Premier MUN Conference Since 2012</span>
                     </h1>
 
                     <div className="hero__date">
