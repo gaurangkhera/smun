@@ -4,6 +4,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Secretariat from './pages/Secretariat';
 import Committees from './pages/Committees';
+import CommitteeDetail from './pages/CommitteeDetail';
 import Contact from './pages/Contact';
 import ConferenceDetails from './pages/ConferenceDetails';
 import './index.css';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/secretariat" element={<Secretariat />} />
           <Route path="/committees" element={<Committees />} />
+          <Route path="/committees/:committeeId" element={<CommitteeDetail />} />
           <Route path="/conference-details" element={<ConferenceDetails />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

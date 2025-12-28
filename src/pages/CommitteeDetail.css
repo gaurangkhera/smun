@@ -1,0 +1,330 @@
+/* ===================================
+   Committee Detail Hero
+   =================================== */
+.committee-detail-hero {
+    padding: var(--space-32) 0 var(--space-12);
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-navy-medium) 0%, var(--color-navy-deep) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures content is centered */
+}
+
+/* Logo Wrapper - ensures proper centering */
+.committee-detail-hero__logo-wrapper {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto var(--space-6);
+    border-radius: 50%;
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-orange);
+    box-shadow: 0 0 20px rgba(224, 116, 40, 0.2);
+}
+
+.committee-detail-hero__logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+}
+
+/* Scaled logos - less padding, logo fills more of the circle */
+.committee-detail-hero__logo-wrapper--scaled .committee-detail-hero__logo-img {
+    padding: 4px;
+}
+
+/* Cover logos - fill the entire circle */
+.committee-detail-hero__logo-wrapper--cover {
+    background-color: transparent;
+}
+
+.committee-detail-hero__logo-wrapper--cover .committee-detail-hero__logo-img {
+    object-fit: cover;
+    object-position: center center;
+    padding: 0;
+}
+
+.committee-detail-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-orange), transparent);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-cream);
+    opacity: 0.5;
+    text-decoration: none;
+    margin-bottom: var(--space-6);
+    transition: opacity 0.2s ease;
+    align-self: flex-start; /* Keeps back button aligned to start of container width if strictly needed, but let's center it for better mobile flow or keep it floating top left of content? Let's stick to inline-block in center flow. */
+}
+
+/* Actually, centering the back link usually looks better in this hero layout */
+.container > .back-link {
+    align-self: center;
+}
+
+.back-link:hover {
+    opacity: 1;
+}
+
+.back-arrow {
+    font-size: var(--text-lg);
+}
+
+.committee-detail-hero__title {
+    font-size: var(--text-4xl);
+    color: var(--color-cream);
+    margin-bottom: var(--space-4);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.committee-detail-hero__subtitle {
+    font-family: var(--font-accent);
+    font-size: var(--text-lg);
+    letter-spacing: 0.1em;
+    color: var(--color-orange);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* ===================================
+   Directors Section
+   =================================== */
+.committee-directors {
+    text-align: center;
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-8);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-cream);
+    margin-bottom: var(--space-8);
+    opacity: 0.9;
+}
+
+.directors-row {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-10);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-8);
+}
+
+.director-card {
+    text-align: center;
+    max-width: 180px;
+}
+
+.director-card__photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto var(--space-4);
+    border: 2px solid rgba(224, 116, 40, 0.4);
+    background: var(--color-navy-deep);
+    transition: border-color 0.3s ease;
+}
+
+.director-card:hover .director-card__photo {
+    border-color: var(--color-orange);
+}
+
+.director-card__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.director-card__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.director-card__placeholder svg {
+    width: 50%;
+    height: 50%;
+    color: var(--color-cream);
+    opacity: 0.2;
+}
+
+.director-card__name {
+    font-family: var(--font-display);
+    font-size: var(--text-base);
+    color: var(--color-cream);
+    margin-bottom: var(--space-1);
+}
+
+.director-card__role {
+    font-family: var(--font-accent);
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    color: var(--color-orange);
+    opacity: 0.8;
+}
+
+.additional-directors {
+    margin-top: var(--space-4);
+    color: var(--color-cream);
+    opacity: 0.7;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    text-align: center;
+}
+
+.additional-directors strong {
+    color: var(--color-orange);
+}
+
+/* ===================================
+   Committee Write-up & Meta
+   =================================== */
+.committee-writeup {
+    text-align: center;
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-16);
+}
+
+.committee-writeup .section-title {
+    margin-bottom: var(--space-8);
+}
+
+.committee-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+    padding: var(--space-6);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.committee-meta__item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.committee-meta__item h3 {
+    font-family: var(--font-accent);
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-orange);
+    margin-bottom: var(--space-2);
+}
+
+.committee-meta__item p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-cream);
+    line-height: 1.5;
+}
+
+.committee-meta__item a {
+    color: var(--color-cream);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.committee-meta__item a:hover {
+    color: var(--color-orange);
+}
+
+.writeup-placeholder {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-8) var(--space-6);
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    text-align: left;
+}
+
+.writeup-placeholder p {
+    font-family: var(--font-body);
+    font-size: var(--text-lg);
+    color: var(--color-cream);
+    line-height: 1.8;
+    font-style: normal;
+    opacity: 0.85;
+    margin-bottom: var(--space-4);
+}
+
+.matrix-download {
+    margin-top: var(--space-12);
+}
+
+/* ===================================
+   Responsive
+   =================================== */
+@media (max-width: 768px) {
+    .committee-detail-hero__title {
+        font-size: var(--text-3xl);
+    }
+    
+    .committee-detail-hero__subtitle {
+        font-size: var(--text-base);
+    }
+
+    .director-card__photo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .directors-row {
+        gap: var(--space-6);
+    }
+
+    .committee-directors {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-6);
+    }
+
+    .committee-writeup {
+        padding-top: var(--space-4);
+    }
+    
+    .committee-meta {
+        flex-direction: column;
+        gap: var(--space-6);
+        text-align: center;
+    }
+    
+    .committee-detail-hero__logo-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .committee-detail-hero__logo-wrapper--scaled .committee-detail-hero__logo-img {
+        padding: 3px;
+    }
+}
