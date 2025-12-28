@@ -213,7 +213,10 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Sharadha K.V.', 'Disha Karmarkar'],
             email: 'uncajournalism2026.smun@gmail.com',
-            agenda: '1. Reporting on the Conference. 2. Analysing the role of media in the Arab Spring with a special emphasis on the Tunisian revolution in light of the media blackout following the self-immolation of Mohamed Bouazizi.',
+            agenda: [
+                'Reporting on the Conference.',
+                'Analysing the role of media in the Arab Spring with a special emphasis on the Tunisian revolution in light of the media blackout following the self-immolation of Mohamed Bouazizi.'
+            ],
             freezeDate: '20th December 2010',
             matrix: '/committees/Matrices /UNCA Journalism_Matrix - Sheet1.pdf',
             writeup: [
@@ -253,7 +256,10 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Yehom Konwar Gogoi'],
             email: 'Uncac2026.smun@gmail.com',
-            agenda: '1. Reporting on the Conference Through Political Cartooning. 2. Deliberating on the State Retaliation and the Threats to Press Freedom Faced by Journalists in the Aftermath of the Panama Papers.',
+            agenda: [
+                'Reporting on the Conference Through Political Cartooning.',
+                'Deliberating on the State Retaliation and the Threats to Press Freedom Faced by Journalists in the Aftermath of the Panama Papers.'
+            ],
             freezeDate: '3rd April 2016',
             matrix: '/committees/Matrices /UNCA-Cartooning_Matrix .pdf',
             writeup: [
@@ -326,14 +332,26 @@ const CommitteeDetail = () => {
             <section className="committee-writeup section-lg">
                 <div className="container">
 
+                    {/* Prominent Agenda Section */}
+                    {committee.agenda && (
+                        <div className="committee-agenda">
+                            <h2 className="committee-agenda__title">Agenda</h2>
+                            <div className="committee-agenda__content">
+                                {Array.isArray(committee.agenda) ? (
+                                    <ol className="committee-agenda__list">
+                                        {committee.agenda.map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                    </ol>
+                                ) : (
+                                    <p>{committee.agenda}</p>
+                                )}
+                            </div>
+                        </div>
+                    )}
+
                     {/* Committee Metadata */}
                     <div className="committee-meta">
-                        {committee.agenda && (
-                            <div className="committee-meta__item">
-                                <h3>Agenda</h3>
-                                <p>{committee.agenda}</p>
-                            </div>
-                        )}
                         {committee.freezeDate && (
                             <div className="committee-meta__item">
                                 <h3>Freeze Date</h3>

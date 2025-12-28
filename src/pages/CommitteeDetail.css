@@ -213,6 +213,70 @@
     margin-bottom: var(--space-8);
 }
 
+/* ===================================
+   Prominent Agenda Section
+   =================================== */
+.committee-agenda {
+    max-width: 900px;
+    margin: 0 auto var(--space-10);
+    padding: var(--space-8);
+    background: linear-gradient(135deg, rgba(224, 116, 40, 0.1) 0%, rgba(224, 116, 40, 0.05) 100%);
+    border-radius: 12px;
+    border: 2px solid rgba(224, 116, 40, 0.3);
+    text-align: center;
+}
+
+.committee-agenda__title {
+    font-family: var(--font-accent);
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-orange);
+    margin-bottom: var(--space-4);
+}
+
+.committee-agenda__content {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-cream);
+    line-height: 1.6;
+}
+
+.committee-agenda__content p {
+    margin: 0;
+}
+
+.committee-agenda__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.committee-agenda__list li {
+    position: relative;
+    padding-left: var(--space-8);
+    margin-bottom: var(--space-3);
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    color: var(--color-cream);
+    line-height: 1.5;
+}
+
+.committee-agenda__list li:last-child {
+    margin-bottom: 0;
+}
+
+.committee-agenda__list li::before {
+    content: counter(list-item) ".";
+    counter-increment: list-item;
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-weight: 600;
+}
+
 .committee-meta {
     display: flex;
     justify-content: center;
@@ -317,6 +381,18 @@
         flex-direction: column;
         gap: var(--space-6);
         text-align: center;
+    }
+
+    .committee-agenda {
+        padding: var(--space-6);
+    }
+
+    .committee-agenda__content {
+        font-size: var(--text-lg);
+    }
+
+    .committee-agenda__list li {
+        font-size: var(--text-base);
     }
     
     .committee-detail-hero__logo-wrapper {
