@@ -46,7 +46,8 @@ const Committees = () => {
             directors: [
                 { name: 'Aryaman Pragya' },
                 { name: 'Vihaan Rustagi' }
-            ]
+            ],
+            matrix: '/committees/Matrices /Matrix - Lok Sabha.pdf'
         },
         {
             id: 'crisis-committee',

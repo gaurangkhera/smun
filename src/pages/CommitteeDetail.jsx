@@ -112,6 +112,7 @@ const CommitteeDetail = () => {
             email: 'ssloksabha2026.smun@gmail.com',
             agenda: 'Reckoning with the Attack on the Indian Parliament and the Republic\'s Demand for the Prevention of Terrorism Act',
             freezeDate: 'December 18, 2001',
+            matrix: '/committees/Matrices /Matrix - Lok Sabha.pdf',
             writeup: [
                 `"Terrorism has become a festering wound. It is an enemy of humanity." — Atal Bihari Vajpayee`,
                 `On December 13, that wound cut straight into the heart of the Indian Republic. Gunfire has stopped, but the reverberations haven't. Terror forced its way into the nation's most sacred democratic sanctum and opened fire on the very chamber where the mandate of a billion people becomes law. The Parliament of India was sieged, its sandstone walls torn by bullets and its members metres away from an unprecedented national rupture.`,
