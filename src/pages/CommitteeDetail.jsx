@@ -137,7 +137,6 @@ const CommitteeDetail = () => {
             writeup: [
                 `The Ad-Hoc Committee of Sanskriti Model United Nations will provide the delegates with an immersive experience into a world of chaos and conflict. The committee will move at a fast pace, requiring the delegates to be creative and willing to take high stakes decisions.`,
                 `"All shall be revealed in due time"`,
-                `(Note: The Royal Court of the Horn of Africa Matrix suggests a historical crisis setting involving the Horn of Africa, Italy's colonial ambitions and Ethiopia's resistance, set around 1895.)`
             ]
         },
         'semi-crisis-committee': {
@@ -278,9 +277,9 @@ const CommitteeDetail = () => {
                     </Link>
                     {committee.logo && (
                         <div className={`committee-detail-hero__logo-wrapper ${committee.logoStyle ? `committee-detail-hero__logo-wrapper--${committee.logoStyle}` : ''}`}>
-                            <img 
-                                src={committee.logo} 
-                                alt={`${committee.shortName} Logo`} 
+                            <img
+                                src={committee.logo}
+                                alt={`${committee.shortName} Logo`}
                                 className="committee-detail-hero__logo-img"
                             />
                         </div>
