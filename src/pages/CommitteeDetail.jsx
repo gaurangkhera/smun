@@ -296,7 +296,7 @@ const CommitteeDetail = () => {
             </section>
 
             {/* Directors Section */}
-            <section className="committee-directors section-lg">
+            <section className="committee-directors">
                 <div className="container">
                     <h2 className="section-title">Committee Directors</h2>
                     <div className="directors-row">
@@ -329,7 +329,7 @@ const CommitteeDetail = () => {
             </section>
 
             {/* Committee Info & Write-up */}
-            <section className="committee-writeup section-lg">
+            <section className="committee-writeup">
                 <div className="container">
 
                     {/* Prominent Agenda Section */}
