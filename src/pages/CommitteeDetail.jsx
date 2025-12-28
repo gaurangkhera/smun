@@ -46,7 +46,7 @@ const CommitteeDetail = () => {
             email: 'unga2026.smun@gmail.com',
             agenda: 'Addressing the Instability in the Democratic Republic of Congo during "Africa\'s World War" Following the Assassination of Laurent Kabila and Foreign Military Interventions',
             freezeDate: '18th January, 2001',
-            matrix: '/committees/Matrices /Matrix - DISEC .pdf',
+
             writeup: [
                 `"In a dark place we find ourselves, and a little more knowledge lights our way"`,
                 `Turmoil, instability, and chaos. This marks the current state of an entire continent. A continent erupting in flames, being pulled apart by forces far larger than its borders. The Democratic Republic of Congo currently stands at the epicenter of one of the most prominent and complex geopolitical conflicts, often termed as "Africa's World War". Rivalry between African states, foreign intervention, non-state actors, widespread instability, political fragmentation, humanitarian devastation, and the rise of regional militant groups have led to extreme conflict.`,
@@ -68,7 +68,7 @@ const CommitteeDetail = () => {
             additionalDirectors: ['Aryav Sachan', 'Avyukt Prasad', 'Divispruk Kapoor'],
             email: 'unrwa2026.smun@gmail.com',
             agenda: 'Safeguarding Humanitarian Corridors in Active Conflict Zones While Upholding Neutrality and International Humanitarian Law aimed to address all forms of Violence with a Special Emphasis on the Palestinian Refugees in the Near East',
-            matrix: '/committees/Matrices /UNRWA Matrix Inter 2026.pdf',
+
             writeup: [
                 `"No one puts their children in a boat unless the water is safer than the land" - Warsan Shire`,
                 `In situations of armed conflict, the United Nations and the international community as a whole carry an obligation to protect civilian populations caught amid the hostilities. As wars escalate and conflicts become increasingly urbanised and protracted, innocent civilians are often denied access to basic necessities such as food, medical care, shelter, and safe passage. The need to establish humanitarian corridors is quite clear considering that the inability to do so poses a direct threat to civilian survival and represents a significant challenge to the effective application of international humanitarian law.`,
@@ -90,7 +90,7 @@ const CommitteeDetail = () => {
             email: 'unsc2026.smun@gmail.com',
             agenda: 'The situation in Greenland, 2039',
             freezeDate: 'July 29, 2039',
-            matrix: '/committees/Matrices /Matrix - UNSC InterSMUN_26.pdf',
+
             writeup: [
                 `The stage is set for a conquest in the frozen firmament of the High North. As the old order fractures and the institutions falter, their authority thaws like frost beneath the sun. Greenland emerges from the margins to the very centre of global calculations. Once marginalised, Africa transforms into a colosseum of international rivalry. Competing powers entrench themselves through debt, security and development.`,
                 `Amidst this pressure, a charismatic pan-African movement, built around continental unity through water security and shared technological advancements, gains momentum like storm clouds gathering over the savannah. In an era of fragmentation, India aligns its strategic ambitions with the weight of its cultural and civilizational inheritance, ancient and audacious. Following a decisive victory in Ukraine, Russia resurges, expands its influence, and revives a sphere of control that stretches across the region like a shadow across the snow.`,
@@ -112,7 +112,7 @@ const CommitteeDetail = () => {
             email: 'ssloksabha2026.smun@gmail.com',
             agenda: 'Reckoning with the Attack on the Indian Parliament and the Republic\'s Demand for the Prevention of Terrorism Act',
             freezeDate: 'December 18, 2001',
-            matrix: '/committees/Matrices /Matrix - Lok Sabha.pdf',
+
             writeup: [
                 `"Terrorism has become a festering wound. It is an enemy of humanity." — Atal Bihari Vajpayee`,
                 `On December 13, that wound cut straight into the heart of the Indian Republic. Gunfire has stopped, but the reverberations haven't. Terror forced its way into the nation's most sacred democratic sanctum and opened fire on the very chamber where the mandate of a billion people becomes law. The Parliament of India was sieged, its sandstone walls torn by bullets and its members metres away from an unprecedented national rupture.`,
@@ -173,7 +173,7 @@ const CommitteeDetail = () => {
             email: 'ussenate2026.smun@gmail.com',
             agenda: 'The 2008 Financial Crisis (Addressing the 2008 Financial Fallout and Formulating Urgent National Strategies to Restore National Economic Stability)',
             freezeDate: '15th September 2008',
-            matrix: '/committees/Matrices /Emergency Session of the 110th US Senate.pdf',
+
             writeup: [
                 `"Desperate Times, Desperate Measures"`,
                 `In the early hours of September 15th, an institution that was considered to be the "titan" of Wall Street, the 158-year-old investment bank Lehman Brothers, filed for bankruptcy. The world's largest economy now stands on the verge of collapse. Within minutes, shockwaves tore through the global market, rattling the various financial capitals across the world as the markets convulsed, credit froze, and the investors' trust evaporated into thin air.`,
@@ -218,7 +218,7 @@ const CommitteeDetail = () => {
                 'Analysing the role of media in the Arab Spring with a special emphasis on the Tunisian revolution in light of the media blackout following the self-immolation of Mohamed Bouazizi.'
             ],
             freezeDate: '20th December 2010',
-            matrix: '/committees/Matrices /UNCA Journalism_Matrix - Sheet1.pdf',
+
             writeup: [
                 `"When people will to live, Destiny must surely respond" - Abul-Qacem Echebbi`,
                 `The Arab Spring began, as most revolutions often do: with silence. In December 2010, when Mohamed Bouazizi set himself ablaze in Sidi Bouzid, the Tunisian state attempted to erase the radical act of self-immolation from the public memory through an aggressive media blackout. What followed exposed a fundamental tension at the heart of modern political power: the desire of authoritarian regimes to control narratives, and the growing impossibility of doing so in a digitised world.`,
@@ -238,7 +238,7 @@ const CommitteeDetail = () => {
             additionalDirectors: ['Amyra Rachel Solomon'],
             email: 'uncap2026.smun@gmail.com',
             agenda: 'Immortalising the Conference: Capturing Debates and Turning Moments into Legacies',
-            matrix: '/committees/Matrices /UNCA Photography Matrix.pdf',
+
             writeup: [
                 `The photographers are an essential part of SMUN. Being a part of this committee, a photographer must capture the pivotal moments and provide an artistic perspective through each image. From covering the mundane committee proceedings to dramatic crisis sessions, the UNCA photographers aim to shed light to the unnoticed.`,
                 `The committee sessions of the UNCA-Photographers will be segregated into photography sessions, and crisis sessions. During the photography sessions, photographers will be required to work on their tasks and submissions and during the crisis sessions, photographers will have to use their skills under high pressure circumstances and work as a team.`,
@@ -261,7 +261,7 @@ const CommitteeDetail = () => {
                 'Deliberating on the State Retaliation and the Threats to Press Freedom Faced by Journalists in the Aftermath of the Panama Papers.'
             ],
             freezeDate: '3rd April 2016',
-            matrix: '/committees/Matrices /UNCA-Cartooning_Matrix .pdf',
+
             writeup: [
                 `In an age awash with information and yet governed by silence, an unnamed voice dared to speak through the hush of power. One mail, 11.5 million documents, 2.6 terabytes of enforced obscurity. On 3rd April 2016, what the world witnessed was not merely the biggest information leak of history; it was a collective outcry of truths long buried and voices long silenced. The Panama Papers exposed an intricate network of financial secrecy that entangled political leaders, multinational corporations, and elites across the globe.`,
                 `In the wake of the Panama Papers, journalists across the globe were reminded of the cost of deviance. Surveillance became routine, harassment and threats against journalists were orchestrated and the very institutions tasked with protecting free expression stood complicit in its erosion.`,
@@ -373,13 +373,7 @@ const CommitteeDetail = () => {
                         ))}
                     </div>
 
-                    {committee.matrix && (
-                        <div className="matrix-download">
-                            <a href={committee.matrix} target="_blank" rel="noopener noreferrer" className="committee-btn committee-btn--details" style={{ fontSize: '1rem', padding: '12px 24px' }}>
-                                View Committee Matrix
-                            </a>
-                        </div>
-                    )}
+
                 </div>
             </section>
         </div>
