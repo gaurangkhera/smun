@@ -15,7 +15,7 @@ const Committees = () => {
                 { name: 'Jai Singh' },
                 { name: 'Shaurya Banerjee' }
             ],
-            matrix: '/committees/Matrices /Matrix - DISEC .pdf'
+
         },
         {
             id: 'humanitarian-committee',
@@ -26,7 +26,7 @@ const Committees = () => {
                 { name: 'Aishani Purohit' },
                 { name: 'Tejas Veer Singh' }
             ],
-            matrix: '/committees/Matrices /UNRWA Matrix Inter 2026.pdf'
+
         },
         {
             id: 'un-security-council',
@@ -36,7 +36,7 @@ const Committees = () => {
             directors: [
                 { name: 'Raghav Gupta Rai' }
             ],
-            matrix: '/committees/Matrices /Matrix - UNSC InterSMUN_26.pdf'
+
         },
         {
             id: 'indian-committee',
@@ -47,7 +47,7 @@ const Committees = () => {
                 { name: 'Aryaman Pragya' },
                 { name: 'Vihaan Rustagi' }
             ],
-            matrix: '/committees/Matrices /Matrix - Lok Sabha.pdf'
+
         },
         {
             id: 'crisis-committee',
@@ -78,7 +78,7 @@ const Committees = () => {
                 { name: 'Vedant Prakash' },
                 { name: 'Kunal Aggarwal' }
             ],
-            matrix: '/committees/Matrices /Emergency Session of the 110th US Senate.pdf'
+
         },
         {
             id: 'justice-committee',
@@ -140,16 +140,7 @@ const Committees = () => {
                                         >
                                             Details
                                         </Link>
-                                        {committee.matrix ? (
-                                            <a 
-                                                href={committee.matrix} 
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="committee-btn committee-btn--matrix"
-                                            >
-                                                Matrix
-                                            </a>
-                                        ) : null}
+
                                     </div>
                                 </div>
                             </div>
