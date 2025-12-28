@@ -111,7 +111,7 @@
 .committee-directors {
     text-align: center;
     padding-top: var(--space-12);
-    padding-bottom: var(--space-4);
+    padding-bottom: var(--space-2);
 }
 
 .section-title {
@@ -127,7 +127,7 @@
     justify-content: center;
     gap: var(--space-10);
     flex-wrap: wrap;
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-4);
 }
 
 .director-card {
@@ -205,7 +205,7 @@
    =================================== */
 .committee-writeup {
     text-align: center;
-    padding-top: var(--space-4);
+    padding-top: var(--space-2);
     padding-bottom: var(--space-16);
 }
 
