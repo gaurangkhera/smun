@@ -16,7 +16,7 @@ const Secretariat = () => {
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
         'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
-        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika'
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal'
     ];
 
     const hasPhoto = (name) => {
@@ -41,7 +41,7 @@ const Secretariat = () => {
         // General Assembly Directors
         { role: 'General Assembly', name: 'Aanya Chand', row: 7 },
         { role: 'General Assembly', name: 'Jai Singh', row: 7 },
-        { role: 'General Assembly', name: 'Shaurya Bannerjee', row: 7 },
+        { role: 'General Assembly', name: 'Shaurya Banerjee', row: 7 },
 
         // Humanitarian Committee Directors
         { role: 'Humanitarian Committee', name: 'Aishani Purohit', row: 8 },
