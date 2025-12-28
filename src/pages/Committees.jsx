@@ -57,8 +57,7 @@ const Committees = () => {
             directors: [
                 { name: 'Krish Aggarwal' },
                 { name: 'Manasvi Bhambani' }
-            ],
-            matrix: '/committees/Matrices /Royal Court of the Horn of Africa-Matrix.pdf'
+            ]
         },
         {
             id: 'semi-crisis-committee',

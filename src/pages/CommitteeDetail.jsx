@@ -134,7 +134,6 @@ const CommitteeDetail = () => {
             additionalDirectors: ['Savya Karri', 'Raaga Varunika', 'Eira Jha'],
             email: 'adhoc2026.smun@gmail.com',
             agenda: 'Classified',
-            matrix: '/committees/Matrices /Royal Court of the Horn of Africa-Matrix.pdf',
             writeup: [
                 `The Ad-Hoc Committee of Sanskriti Model United Nations will provide the delegates with an immersive experience into a world of chaos and conflict. The committee will move at a fast pace, requiring the delegates to be creative and willing to take high stakes decisions.`,
                 `"All shall be revealed in due time"`,
