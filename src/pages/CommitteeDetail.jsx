@@ -39,8 +39,7 @@ const CommitteeDetail = () => {
             logoStyle: 'cover',
             directors: [
                 { name: 'Aanya Chand' },
-                { name: 'Jai Singh' },
-                { name: 'Shaurya Banerjee' }
+                { name: 'Jai Singh' }
             ],
             additionalDirectors: ['Ishi Bhaskar', 'Varenya Shekhar', 'Kiaan Uppal'],
             email: 'unga2026.smun@gmail.com',
@@ -63,7 +62,8 @@ const CommitteeDetail = () => {
             logoStyle: 'scaled',
             directors: [
                 { name: 'Tejas Veer Singh' },
-                { name: 'Aishani Purohit' }
+                { name: 'Aishani Purohit' },
+                { name: 'Shaurya Banerjee' }
             ],
             additionalDirectors: ['Aryav Sachan', 'Avyukt Prasad', 'Divispruk Kapoor'],
             email: 'unrwa2026.smun@gmail.com',
