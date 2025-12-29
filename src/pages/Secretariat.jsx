@@ -41,11 +41,11 @@ const Secretariat = () => {
         // General Assembly Directors
         { role: 'General Assembly', name: 'Aanya Chand', row: 7 },
         { role: 'General Assembly', name: 'Jai Singh', row: 7 },
-        { role: 'General Assembly', name: 'Shaurya Banerjee', row: 7 },
 
         // Humanitarian Committee Directors
         { role: 'Humanitarian Committee', name: 'Aishani Purohit', row: 8 },
         { role: 'Humanitarian Committee', name: 'Tejas Veer Singh', row: 8 },
+        { role: 'Humanitarian Committee', name: 'Shaurya Banerjee', row: 8 },
 
         // UNSC Director
         { role: 'UN Security Council', name: 'Raghav Gupta Rai', row: 9 },
