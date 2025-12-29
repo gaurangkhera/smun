@@ -19,7 +19,7 @@ const CommitteeDetail = () => {
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
         'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
-        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal'
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal', 'shaurya'
     ];
 
     const hasPhoto = (name) => {
@@ -89,7 +89,8 @@ const CommitteeDetail = () => {
             additionalDirectors: ['Gauri Tiwari', 'Kanav Rakheja', 'Ishaan Kapoor'],
             email: 'unsc2026.smun@gmail.com',
             agenda: 'The situation in Greenland, 2039',
-            freezeDate: 'July 29, 2039',
+            dateOfConvening: 'July 27, 2039',
+            freezeDate: 'January 1, 2026',
 
             writeup: [
                 `The stage is set for a conquest in the frozen firmament of the High North. As the old order fractures and the institutions falter, their authority thaws like frost beneath the sun. Greenland emerges from the margins to the very centre of global calculations. Once marginalised, Africa transforms into a colosseum of international rivalry. Competing powers entrench themselves through debt, security and development.`,
@@ -352,6 +353,12 @@ const CommitteeDetail = () => {
 
                     {/* Committee Metadata */}
                     <div className="committee-meta">
+                        {committee.dateOfConvening && (
+                            <div className="committee-meta__item">
+                                <h3>Date of Convening</h3>
+                                <p>{committee.dateOfConvening}</p>
+                            </div>
+                        )}
                         {committee.freezeDate && (
                             <div className="committee-meta__item">
                                 <h3>Freeze Date</h3>
