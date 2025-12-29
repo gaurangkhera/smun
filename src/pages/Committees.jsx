@@ -12,8 +12,7 @@ const Committees = () => {
             logoStyle: 'cover',
             directors: [
                 { name: 'Aanya Chand' },
-                { name: 'Jai Singh' },
-                { name: 'Shaurya Banerjee' }
+                { name: 'Jai Singh' }
             ],
 
         },
@@ -24,7 +23,8 @@ const Committees = () => {
             logoStyle: 'scaled',
             directors: [
                 { name: 'Aishani Purohit' },
-                { name: 'Tejas Veer Singh' }
+                { name: 'Tejas Veer Singh' },
+                { name: 'Shaurya Banerjee' }
             ],
 
         },
