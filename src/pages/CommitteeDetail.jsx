@@ -91,6 +91,7 @@ const CommitteeDetail = () => {
             agenda: 'The situation in Greenland, 2039',
             dateOfConvening: 'July 27, 2039',
             freezeDate: 'January 1, 2026',
+            doubleDelegate: true,
 
             writeup: [
                 `The stage is set for a conquest in the frozen firmament of the High North. As the old order fractures and the institutions falter, their authority thaws like frost beneath the sun. Greenland emerges from the margins to the very centre of global calculations. Once marginalised, Africa transforms into a colosseum of international rivalry. Competing powers entrench themselves through debt, security and development.`,
@@ -293,13 +294,18 @@ const CommitteeDetail = () => {
                     )}
                     <h1 className="committee-detail-hero__title">{committee.name}</h1>
                     <p className="committee-detail-hero__subtitle">SMUN 2026</p>
+                    {committee.doubleDelegate && (
+                        <p className="committee-detail-hero__double-delegate">DOUBLE DELEGATE</p>
+                    )}
                 </div>
             </section>
 
             {/* Directors Section */}
             <section className="committee-directors">
                 <div className="container">
-                    <h2 className="section-title">Committee Directors</h2>
+                    <h2 className="section-title">
+                        {committee.directors.length === 1 ? 'Committee Director' : 'Committee Directors'}
+                    </h2>
                     <div className="directors-row">
                         {committee.directors.map((director, index) => (
                             <div key={index} className="director-card">
