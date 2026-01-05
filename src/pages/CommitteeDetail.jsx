@@ -34,7 +34,7 @@ const CommitteeDetail = () => {
     const committees = {
         'general-assembly': {
             name: 'The Disarmament and International Security Committee',
-            shortName: 'General Assembly',
+            shortName: 'DISEC',
             logo: '/committees/Logos/UNGA Logo.png',
             logoStyle: 'cover',
             directors: [
@@ -57,7 +57,7 @@ const CommitteeDetail = () => {
         },
         'humanitarian-committee': {
             name: 'Advisory Commission of the United Nations Relief and Works Agency for Palestine Refugees in the Near East',
-            shortName: 'Humanitarian Committee',
+            shortName: 'UNRWA',
             logo: '/committees/Logos/UNRWA.png',
             logoStyle: 'scaled',
             directors: [
@@ -80,7 +80,7 @@ const CommitteeDetail = () => {
         },
         'un-security-council': {
             name: 'United Nations Security Council (Futuristic)',
-            shortName: 'UN Security Council',
+            shortName: 'UN Futuristic Security Council',
             logo: '/committees/Logos/UNSC LOGO.jpg',
             logoStyle: 'cover',
             directors: [
@@ -103,7 +103,7 @@ const CommitteeDetail = () => {
         },
         'indian-committee': {
             name: 'The Special Session of the 13th Lok Sabha',
-            shortName: 'Indian Committee',
+            shortName: 'The 13th Lok Sabha',
             logo: '/committees/Logos/LokSabha.jpeg',
             logoStyle: 'cover',
             directors: [
@@ -126,7 +126,7 @@ const CommitteeDetail = () => {
         },
         'crisis-committee': {
             name: 'Ad-Hoc Committee',
-            shortName: 'Crisis Committee',
+            shortName: 'Ad-Hoc Crisis Committee',
             logo: '/committees/Logos/Adhoc.png',
             logoStyle: 'cover',
             directors: [
@@ -143,7 +143,7 @@ const CommitteeDetail = () => {
         },
         'semi-crisis-committee': {
             name: 'The Cognac Strategic Conclave',
-            shortName: 'Semi-Crisis Committee',
+            shortName: 'The Cognac Strategic Conclave',
             logo: '/committees/Logos/Semi Crisis Logo.png',
             logoStyle: 'cover',
             directors: [
@@ -164,7 +164,7 @@ const CommitteeDetail = () => {
         },
         'specialised-committee': {
             name: 'Emergency Session of the 110th United States Senate',
-            shortName: 'Specialised Committee',
+            shortName: 'The 110th United States Senate',
             logo: '/committees/Logos/US Senate_Specialised.png',
             logoStyle: 'scaled',
             directors: [
@@ -186,7 +186,7 @@ const CommitteeDetail = () => {
         },
         'justice-committee': {
             name: 'The Tribunal of the Fallen Sun',
-            shortName: 'Justice Committee',
+            shortName: 'The Tribunal of the Fallen Sun',
             logo: '/committees/Logos/The Jutice Committee LOGO.jpeg',
             logoStyle: 'scaled',
             directors: [
