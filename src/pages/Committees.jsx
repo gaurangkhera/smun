@@ -7,7 +7,7 @@ const Committees = () => {
     const committees = [
         {
             id: 'general-assembly',
-            name: 'General Assembly',
+            name: 'DISEC',
             logo: '/committees/Logos/UNGA Logo.png',
             logoStyle: 'cover',
             directors: [
@@ -18,7 +18,7 @@ const Committees = () => {
         },
         {
             id: 'humanitarian-committee',
-            name: 'Humanitarian Committee',
+            name: 'UNRWA',
             logo: '/committees/Logos/UNRWA.png',
             logoStyle: 'scaled',
             directors: [
@@ -30,7 +30,7 @@ const Committees = () => {
         },
         {
             id: 'un-security-council',
-            name: 'UN Security Council',
+            name: 'UN Futuristic Security Council',
             logo: '/committees/Logos/UNSC LOGO.jpg',
             logoStyle: 'cover',
             directors: [
@@ -40,7 +40,7 @@ const Committees = () => {
         },
         {
             id: 'indian-committee',
-            name: 'Indian Committee',
+            name: 'The 13th Lok Sabha',
             logo: '/committees/Logos/LokSabha.jpeg',
             logoStyle: 'cover',
             directors: [
@@ -51,7 +51,7 @@ const Committees = () => {
         },
         {
             id: 'crisis-committee',
-            name: 'Crisis Committee',
+            name: 'Ad-Hoc Crisis Committee',
             logo: '/committees/Logos/Adhoc.png',
             logoStyle: 'cover',
             directors: [
@@ -61,7 +61,7 @@ const Committees = () => {
         },
         {
             id: 'semi-crisis-committee',
-            name: 'Semi-Crisis Committee',
+            name: 'The Cognac Strategic Conclave',
             logo: '/committees/Logos/Semi Crisis Logo.png',
             logoStyle: 'cover',
             directors: [
@@ -71,7 +71,7 @@ const Committees = () => {
         },
         {
             id: 'specialised-committee',
-            name: 'Specialised Committee',
+            name: 'The 110th United States Senate',
             logo: '/committees/Logos/US Senate_Specialised.png',
             logoStyle: 'scaled',
             directors: [
@@ -82,7 +82,7 @@ const Committees = () => {
         },
         {
             id: 'justice-committee',
-            name: 'Justice Committee',
+            name: 'The Tribunal of the Fallen Sun',
             logo: '/committees/Logos/The Jutice Committee LOGO.jpeg',
             logoStyle: 'scaled',
             directors: [
