@@ -97,20 +97,45 @@
     margin-bottom: var(--space-4);
 }
 
-/* Author names in combined letters */
-.letter-content__text:first-of-type,
-.letter-content__text:contains("AANYA CHAND:"),
-.letter-content__text:contains("RAGHAV G RAI:"),
-.letter-content__text:contains("HRISHIK MALHOTRA:"),
-.letter-content__text:contains("KRISH AGGARWAL:"),
-.letter-content__text:contains("VEDANT PRAKASH:"),
-.letter-content__text:contains("MANASVI BHAMBANI:") {
-    font-weight: 600;
+/* ===================================
+   Multiple Letters Container
+   =================================== */
+.letter-content__multiple {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
-/* Style author name headers */
-.letter-content__box p:not(:first-child) {
-    font-style: normal;
+.letter-content__multiple .letter-content__box {
+    position: relative;
+}
+
+.letter-content__multiple .letter-content__box:not(:last-child) {
+    margin-bottom: var(--space-12);
+    padding-bottom: var(--space-12);
+}
+
+/* Classy divider line between letter boxes */
+.letter-content__multiple .letter-content__box:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-orange), transparent);
+}
+
+/* Author name heading in each box */
+.letter-content__author-name {
+    font-family: var(--font-accent);
+    font-size: var(--text-xl);
+    color: var(--color-cream);
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid rgba(224, 116, 40, 0.3);
 }
 
 /* Back button */
@@ -151,5 +176,18 @@
     
     .letter-content__text:first-child {
         font-size: var(--text-base);
+    }
+    
+    .letter-content__author-name {
+        font-size: var(--text-lg);
+    }
+    
+    .letter-content__multiple .letter-content__box:not(:last-child) {
+        margin-bottom: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+    
+    .letter-content__multiple .letter-content__box:not(:last-child)::after {
+        width: 120px;
     }
 }
