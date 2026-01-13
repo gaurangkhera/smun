@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import './Secretariat.css';
 
 const Secretariat = () => {
@@ -25,16 +24,6 @@ const Secretariat = () => {
         if (name === 'Vedant Prakash') return availablePhotos.includes('vedant prakash');
         if (name === 'Vedant Beriwal') return availablePhotos.includes('vedant beriwal');
         return availablePhotos.includes(firstName);
-    };
-
-    // Map roles to letter routes
-    const letterRoutes = {
-        'Secretary General': 'sg',
-        'Deputy Secretary General': 'dsg',
-        'Director General - Committees': 'dg-committees',
-        'Director General - Conference': 'dg-conference',
-        'Director General - Outreach': 'dg-outreach',
-        'Editor-in-Chief': 'eic'
     };
 
     const secretariat = [
@@ -110,12 +99,6 @@ const Secretariat = () => {
     // Get unique rows
     const rows = [...new Set(secretariat.map(m => m.row))].sort((a, b) => a - b);
 
-    // Check if a row is upper secretariat (rows 1-6)
-    const isUpperSecretariat = (rowNum) => rowNum <= 6;
-
-    // Get letter route for a role
-    const getLetterRoute = (role) => letterRoutes[role] || null;
-
     return (
         <div className="secretariat">
             {/* Hero */}
@@ -132,51 +115,30 @@ const Secretariat = () => {
                     {rows.map((rowNum) => {
                         const rowMembers = secretariat.filter(m => m.row === rowNum);
                         const isLastUpperSec = rowNum === 6;
-                        const isUpperSec = isUpperSecretariat(rowNum);
-                        
-                        // Track which letter buttons have been shown in this row
-                        const rowShownButtons = new Set();
                         
                         return (
                             <div key={rowNum}>
                                 <div className="secretariat-row">
-                                    {rowMembers.map((member, index) => {
-                                        const letterRoute = getLetterRoute(member.role);
-                                        // Only show letter button once per role in each row
-                                        const shouldShowLetterButton = isUpperSec && letterRoute && !rowShownButtons.has(member.role);
-                                        if (shouldShowLetterButton) {
-                                            rowShownButtons.add(member.role);
-                                        }
-                                        
-                                        const CardWrapper = isUpperSec && letterRoute ? Link : 'div';
-                                        const cardProps = isUpperSec && letterRoute ? { to: `/letter/${letterRoute}` } : {};
-                                        
-                                        return (
-                                            <CardWrapper key={index} className={`member-card ${isUpperSec && letterRoute ? 'member-card--clickable' : ''}`} {...cardProps}>
-                                                <div className="member-card__photo">
-                                                    {hasPhoto(member.name) ? (
-                                                        <img src={getPhotoPath(member.name)} alt={member.name} />
-                                                    ) : (
-                                                        <div className="member-card__placeholder">
-                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                                                                <circle cx="12" cy="8" r="4" />
-                                                                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                                                            </svg>
-                                                        </div>
-                                                    )}
-                                                </div>
-                                                <div className="member-card__content">
-                                                    <h3 className="member-card__name">{member.name}</h3>
-                                                    <span className="member-card__role">{member.role}</span>
-                                                    {shouldShowLetterButton && (
-                                                        <span className="member-card__letter-btn">
-                                                            View Letter
-                                                        </span>
-                                                    )}
-                                                </div>
-                                            </CardWrapper>
-                                        );
-                                    })}
+                                    {rowMembers.map((member, index) => (
+                                        <div key={index} className="member-card">
+                                            <div className="member-card__photo">
+                                                {hasPhoto(member.name) ? (
+                                                    <img src={getPhotoPath(member.name)} alt={member.name} />
+                                                ) : (
+                                                    <div className="member-card__placeholder">
+                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                                                            <circle cx="12" cy="8" r="4" />
+                                                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                                        </svg>
+                                                    </div>
+                                                )}
+                                            </div>
+                                            <div className="member-card__content">
+                                                <h3 className="member-card__name">{member.name}</h3>
+                                                <span className="member-card__role">{member.role}</span>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
                                 {isLastUpperSec && (
                                     <div className="secretariat-divider">
