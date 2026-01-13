@@ -148,8 +148,11 @@ const Secretariat = () => {
                                             rowShownButtons.add(member.role);
                                         }
                                         
+                                        const CardWrapper = isUpperSec && letterRoute ? Link : 'div';
+                                        const cardProps = isUpperSec && letterRoute ? { to: `/letter/${letterRoute}` } : {};
+                                        
                                         return (
-                                            <div key={index} className="member-card">
+                                            <CardWrapper key={index} className={`member-card ${isUpperSec && letterRoute ? 'member-card--clickable' : ''}`} {...cardProps}>
                                                 <div className="member-card__photo">
                                                     {hasPhoto(member.name) ? (
                                                         <img src={getPhotoPath(member.name)} alt={member.name} />
@@ -166,15 +169,12 @@ const Secretariat = () => {
                                                     <h3 className="member-card__name">{member.name}</h3>
                                                     <span className="member-card__role">{member.role}</span>
                                                     {shouldShowLetterButton && (
-                                                        <Link 
-                                                            to={`/letter/${letterRoute}`} 
-                                                            className="member-card__letter-btn"
-                                                        >
+                                                        <span className="member-card__letter-btn">
                                                             View Letter
-                                                        </Link>
+                                                        </span>
                                                     )}
                                                 </div>
-                                            </div>
+                                            </CardWrapper>
                                         );
                                     })}
                                 </div>
