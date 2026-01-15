@@ -30,3 +30,213 @@
     letter-spacing: 0.2em;
     color: var(--color-orange);
 }
+
+/* ===================================
+   Registration Notice
+   =================================== */
+.registration-notice {
+    padding: var(--space-8) 0;
+}
+
+.registration-notice__box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-6);
+    background: rgba(224, 116, 40, 0.1);
+    border: 1px solid rgba(224, 116, 40, 0.3);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.registration-notice__box p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-orange);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* ===================================
+   Registration Options
+   =================================== */
+.registration-options {
+    padding-top: var(--space-8);
+}
+
+.registration-card {
+    max-width: 800px;
+    margin: 0 auto var(--space-10);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(224, 116, 40, 0.15);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.registration-card:last-of-type {
+    margin-bottom: var(--space-12);
+}
+
+.registration-card__header {
+    padding: var(--space-5) var(--space-6);
+    background: rgba(224, 116, 40, 0.08);
+    border-bottom: 1px solid rgba(224, 116, 40, 0.15);
+}
+
+.registration-card__title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--color-cream);
+    margin: 0;
+}
+
+.registration-card__content {
+    padding: var(--space-6) var(--space-6) var(--space-8);
+}
+
+.registration-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6);
+}
+
+.registration-card__list > li {
+    position: relative;
+    padding: var(--space-3) 0;
+    padding-left: var(--space-6);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-cream);
+    opacity: 0.9;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.registration-card__list > li:last-child {
+    border-bottom: none;
+}
+
+.registration-card__list > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--color-orange);
+    border-radius: 50%;
+}
+
+.registration-card__list > li strong {
+    color: var(--color-cream);
+}
+
+.registration-card__note {
+    display: block;
+    font-size: var(--text-sm);
+    opacity: 0.7;
+    margin-top: var(--space-1);
+}
+
+.registration-card__sublist {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-2) 0 0 var(--space-4);
+}
+
+.registration-card__sublist li {
+    position: relative;
+    padding: var(--space-1) 0;
+    padding-left: var(--space-4);
+    font-size: var(--text-sm);
+    opacity: 0.85;
+}
+
+.registration-card__sublist li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    opacity: 0.6;
+}
+
+.registration-card__btn {
+    display: inline-block;
+    margin-top: var(--space-2);
+}
+
+/* ===================================
+   Registration Info
+   =================================== */
+.registration-info {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.registration-info__item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+}
+
+.registration-info__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: var(--color-orange);
+    opacity: 0.8;
+}
+
+.registration-info__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.registration-info__item p {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--color-cream);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.registration-info__item p strong {
+    color: var(--color-cream);
+    opacity: 1;
+}
+
+/* ===================================
+   Responsive
+   =================================== */
+@media (max-width: 768px) {
+    .registration-hero__title {
+        font-size: var(--text-4xl);
+    }
+
+    .registration-card__header {
+        padding: var(--space-4) var(--space-5);
+    }
+
+    .registration-card__title {
+        font-size: var(--text-xl);
+    }
+
+    .registration-card__content {
+        padding: var(--space-5);
+    }
+
+    .registration-card__list > li {
+        font-size: var(--text-sm);
+    }
+
+    .registration-info__item {
+        padding: var(--space-3) var(--space-4);
+    }
+}

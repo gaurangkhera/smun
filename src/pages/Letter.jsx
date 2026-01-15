@@ -38,8 +38,21 @@ const Letter = () => {
         },
         'dg-committees': {
             title: 'Directors General of Committees',
-            authors: ['Aanya Chand', 'Raghav G Rai'],
+            authors: ['Raghav G Rai', 'Aanya Chand'],
             multipleLetters: [
+                {
+                    author: 'Raghav G Rai',
+                    content: [
+                        `Greetings delegates and faculty advisors!`,
+                        `Ah! The weight of inheritance that weighs upon me. The mighty Indian epics, the meditations of Greek philosophers, the authority of Roman law, the timeless force of Shakespeare's plays, the precision of Latin maxims, the philosophies, laws, texts, and traditions that resist neat enumeration, and the speeches of the greatest leaders of past millennia all lie before me. Yet amid this vast inheritance, I am reminded of the words of Theodore Roosevelt: "It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming."`,
+                        `Over the course of this conference, you will inhabit more than one simulation. Inside committee, nothing is permitted to remain intact. Every claim is interrogated, every motive examined, every apparent certainty treated with suspicion. No coin is one-sided. No position is self-justifying. Every accusation carries a defence, and every defence demands scrutiny in return. You learn to hold opposing truths without retreat, to argue against your own instinct, and to recognise that clarity is rarely clean. Judgment here is not about comfort or conviction. It is about perspective.`,
+                        `As day folds into night, in the national capital, where the Union's burden rests, time changes everything and nothing at the same time. Fatigue settles in quietly, thinning patience and stripping away ease, but the demand to think remains uninterrupted. Judgment is not deferred by the hour, nor clarity postponed for comfort. Thought is expected to endure across strain and diminishing reserves. It is within this continuity that a lasting capacity is formed: the ability to reason critically, apply logic with discipline, and sustain sound judgment under adverse conditions.`,
+                        `Unlike my colleagues, I will be candid. SMUN operates at a higher threshold. Its standards are fixed, its pace unyielding. I stood here once as a seventh grader, overwhelmed and unprepared, and the experience shaped me precisely because it did not bend. That severity proved formative. It remains the most valuable experience I have had.`,
+                        `Cape omnia; secunda occasio non erit.`,
+                        `Raghav G Rai`,
+                        `Director General`
+                    ]
+                },
                 {
                     author: 'Aanya Chand',
                     content: [
@@ -53,19 +66,6 @@ const Letter = () => {
                         `Until April,`,
                         `Aanya Chand`,
                         `Director-General of Committees`
-                    ]
-                },
-                {
-                    author: 'Raghav G Rai',
-                    content: [
-                        `Greetings delegates and faculty advisors!`,
-                        `Ah! The weight of inheritance that weighs upon me. The mighty Indian epics, the meditations of Greek philosophers, the authority of Roman law, the timeless force of Shakespeare's plays, the precision of Latin maxims, the philosophies, laws, texts, and traditions that resist neat enumeration, and the speeches of the greatest leaders of past millennia all lie before me. Yet amid this vast inheritance, I am reminded of the words of Theodore Roosevelt: "It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming."`,
-                        `Over the course of this conference, you will inhabit more than one simulation. Inside committee, nothing is permitted to remain intact. Every claim is interrogated, every motive examined, every apparent certainty treated with suspicion. No coin is one-sided. No position is self-justifying. Every accusation carries a defence, and every defence demands scrutiny in return. You learn to hold opposing truths without retreat, to argue against your own instinct, and to recognise that clarity is rarely clean. Judgment here is not about comfort or conviction. It is about perspective.`,
-                        `As day folds into night, in the national capital, where the Union's burden rests, time changes everything and nothing at the same time. Fatigue settles in quietly, thinning patience and stripping away ease, but the demand to think remains uninterrupted. Judgment is not deferred by the hour, nor clarity postponed for comfort. Thought is expected to endure across strain and diminishing reserves. It is within this continuity that a lasting capacity is formed: the ability to reason critically, apply logic with discipline, and sustain sound judgment under adverse conditions.`,
-                        `Unlike my colleagues, I will be candid. SMUN operates at a higher threshold. Its standards are fixed, its pace unyielding. I stood here once as a seventh grader, overwhelmed and unprepared, and the experience shaped me precisely because it did not bend. That severity proved formative. It remains the most valuable experience I have had.`,
-                        `Cape omnia; secunda occasio non erit.`,
-                        `Raghav G Rai`,
-                        `Director General`
                     ]
                 }
             ]

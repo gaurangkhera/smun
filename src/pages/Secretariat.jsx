@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Secretariat.css';
 
 const Secretariat = () => {
@@ -24,6 +25,16 @@ const Secretariat = () => {
         if (name === 'Vedant Prakash') return availablePhotos.includes('vedant prakash');
         if (name === 'Vedant Beriwal') return availablePhotos.includes('vedant beriwal');
         return availablePhotos.includes(firstName);
+    };
+
+    // Map roles to letter routes for upper secretariat
+    const letterRoutes = {
+        'Secretary General': '/letter/sg',
+        'Deputy Secretary General': '/letter/dsg',
+        'Director General - Committees': '/letter/dg-committees',
+        'Director General - Conference': '/letter/dg-conference',
+        'Director General - Outreach': '/letter/dg-outreach',
+        'Editor-in-Chief': '/letter/eic'
     };
 
     const secretariat = [
@@ -99,6 +110,12 @@ const Secretariat = () => {
     // Get unique rows
     const rows = [...new Set(secretariat.map(m => m.row))].sort((a, b) => a - b);
 
+    // Check if a member is upper secretariat (rows 1-6)
+    const isUpperSecretariat = (rowNum) => rowNum <= 6;
+
+    // Get letter route for a role
+    const getLetterRoute = (role) => letterRoutes[role] || null;
+
     return (
         <div className="secretariat">
             {/* Hero */}
@@ -115,30 +132,43 @@ const Secretariat = () => {
                     {rows.map((rowNum) => {
                         const rowMembers = secretariat.filter(m => m.row === rowNum);
                         const isLastUpperSec = rowNum === 6;
+                        const isUpperSec = isUpperSecretariat(rowNum);
                         
                         return (
                             <div key={rowNum}>
                                 <div className="secretariat-row">
-                                    {rowMembers.map((member, index) => (
-                                        <div key={index} className="member-card">
-                                            <div className="member-card__photo">
-                                                {hasPhoto(member.name) ? (
-                                                    <img src={getPhotoPath(member.name)} alt={member.name} />
-                                                ) : (
-                                                    <div className="member-card__placeholder">
-                                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                                                            <circle cx="12" cy="8" r="4" />
-                                                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
-                                                        </svg>
-                                                    </div>
-                                                )}
-                                            </div>
-                                            <div className="member-card__content">
-                                                <h3 className="member-card__name">{member.name}</h3>
-                                                <span className="member-card__role">{member.role}</span>
-                                            </div>
-                                        </div>
-                                    ))}
+                                    {rowMembers.map((member, index) => {
+                                        const letterRoute = getLetterRoute(member.role);
+                                        const isClickable = isUpperSec && letterRoute;
+                                        
+                                        const CardWrapper = isClickable ? Link : 'div';
+                                        const cardProps = isClickable ? { to: letterRoute } : {};
+                                        
+                                        return (
+                                            <CardWrapper 
+                                                key={index} 
+                                                className={`member-card ${isClickable ? 'member-card--clickable' : ''}`} 
+                                                {...cardProps}
+                                            >
+                                                <div className="member-card__photo">
+                                                    {hasPhoto(member.name) ? (
+                                                        <img src={getPhotoPath(member.name)} alt={member.name} />
+                                                    ) : (
+                                                        <div className="member-card__placeholder">
+                                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                                                                <circle cx="12" cy="8" r="4" />
+                                                                <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+                                                            </svg>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                                <div className="member-card__content">
+                                                    <h3 className="member-card__name">{member.name}</h3>
+                                                    <span className="member-card__role">{member.role}</span>
+                                                </div>
+                                            </CardWrapper>
+                                        );
+                                    })}
                                 </div>
                                 {isLastUpperSec && (
                                     <div className="secretariat-divider">
