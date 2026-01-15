@@ -89,11 +89,11 @@ const Home = () => {
                     </p>
 
                     <div className="hero__actions">
-                        <Link to="/committees" className="btn btn-primary">
-                            Explore Committees
+                        <Link to="/registration" className="btn btn-primary">
+                            Register Now
                         </Link>
-                        <Link to="/secretariat" className="btn btn-outline">
-                            Meet the Secretariat
+                        <Link to="/committees" className="btn btn-outline">
+                            Explore Committees
                         </Link>
                     </div>
                 </div>
