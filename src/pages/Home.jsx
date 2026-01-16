@@ -45,6 +45,12 @@ const Home = () => {
                 </div>
 
                 <div className="hero__content">
+                    {/* Registration Open Badge */}
+                    <div className="hero__badge">
+                        <span className="hero__badge-dot"></span>
+                        <span className="hero__badge-text">Registration Open</span>
+                    </div>
+
                     <div className="hero__logo-wrapper">
                         <img src="/SMUN LOGO - NO BG.png" alt="Sanskriti MUN Logo - SMUN Delhi Model United Nations Conference" className="hero__logo" />
                     </div>

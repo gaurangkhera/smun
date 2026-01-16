@@ -39,6 +39,45 @@
     animation: fadeInUp 1s ease forwards;
 }
 
+/* Registration Open Badge */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-4);
+    background: rgba(224, 116, 40, 0.1);
+    border: 1px solid rgba(224, 116, 40, 0.4);
+    border-radius: 50px;
+    margin-bottom: var(--space-6);
+}
+
+.hero__badge-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-orange);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.hero__badge-text {
+    font-family: var(--font-accent);
+    font-size: var(--text-xs);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-orange);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(224, 116, 40, 0.4);
+    }
+    50% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 6px rgba(224, 116, 40, 0);
+    }
+}
+
 .hero__logo-wrapper {
     margin-bottom: var(--space-8);
 }
