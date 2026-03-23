@@ -19,7 +19,7 @@ const CommitteeDetail = () => {
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
         'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
-        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal', 'shaurya'
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal', 'shaurya'
     ];
 
     const hasPhoto = (name) => {
@@ -107,8 +107,7 @@ const CommitteeDetail = () => {
             logo: '/committees/Logos/LokSabha.jpeg',
             logoStyle: 'cover',
             directors: [
-                { name: 'Aryaman Pragya' },
-                { name: 'Vihaan Rustagi' }
+                { name: 'Aryaman Pragya' }
             ],
             additionalDirectors: ['Adidev Singh', 'Auraj Razdan', 'Ruhaan Gaggar'],
             email: 'ssloksabha2026.smun@gmail.com',
@@ -139,7 +138,20 @@ const CommitteeDetail = () => {
             writeup: [
                 `The Ad-Hoc Committee of Sanskriti Model United Nations will provide the delegates with an immersive experience into a world of chaos and conflict. The committee will move at a fast pace, requiring the delegates to be creative and willing to take high stakes decisions.`,
                 `"All shall be revealed in due time"`,
-            ]
+            ],
+            hiddenAscii: `
+77777777777777777777   66666666666666666666   77777777777777777777
+77777777777777777777   66666666666666666666   77777777777777777777
+                7777   6666                                   7777
+               7777    6666                                  7777
+              7777     6666                                 7777
+             7777      666666666666666666                  7777
+            7777       6666666666666666666                7777
+           7777        6666           6666               7777
+          7777         6666           6666              7777
+         7777          6666666666666666666             7777
+        7777           666666666666666666             7777
+`
         },
         'semi-crisis-committee': {
             name: 'The Cognac Strategic Conclave',
@@ -174,7 +186,7 @@ const CommitteeDetail = () => {
             additionalDirectors: ['Aarav Mishra', 'Arnav Gupta'],
             email: 'ussenate2026.smun@gmail.com',
             agenda: 'The 2008 Financial Crisis (Addressing the 2008 Financial Fallout and Formulating Urgent National Strategies to Restore National Economic Stability)',
-            freezeDate: '15th September 2008',
+            freezeDate: 'September 16th 2008, 11:59pm',
 
             writeup: [
                 `"Desperate Times, Desperate Measures"`,
@@ -284,9 +296,35 @@ const CommitteeDetail = () => {
 
 
     return (
-        <div className="committee-detail">
+        <div className="committee-detail" style={{ position: 'relative', overflow: 'hidden', minHeight: '100vh' }}>
+            {committee.hiddenAscii && (
+                <div className="hidden-ascii-bg" style={{
+                    position: 'absolute',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    zIndex: 0,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    overflow: 'hidden',
+                    pointerEvents: 'auto'
+                }}>
+                    <pre style={{
+                        color: 'transparent',
+                        fontFamily: 'monospace',
+                        fontSize: '3vw',
+                        fontWeight: 'bold',
+                        lineHeight: 1.2,
+                        userSelect: 'text',
+                        textAlign: 'center',
+                        margin: 0,
+                        padding: '100px 0' // Ensure it's reachable if page is long
+                    }}>
+                        {committee.hiddenAscii}
+                    </pre>
+                </div>
+            )}
             {/* Hero */}
-            <section className="committee-detail-hero">
+            <section className="committee-detail-hero" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="container">
                     <Link to="/committees" className="back-link">
                         <span className="back-arrow">←</span> Back to Committees
@@ -309,7 +347,7 @@ const CommitteeDetail = () => {
             </section>
 
             {/* Directors Section */}
-            <section className="committee-directors">
+            <section className="committee-directors" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="container">
                     <h2 className="section-title">
                         {committee.directors.length === 1 ? 'Committee Director' : 'Committee Directors'}
@@ -344,7 +382,7 @@ const CommitteeDetail = () => {
             </section>
 
             {/* Committee Info & Write-up */}
-            <section className="committee-writeup">
+            <section className="committee-writeup" style={{ position: 'relative', zIndex: 1 }}>
                 <div className="container">
 
                     {/* Prominent Agenda Section */}

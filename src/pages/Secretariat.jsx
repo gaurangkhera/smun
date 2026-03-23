@@ -17,7 +17,7 @@ const Secretariat = () => {
     const availablePhotos = [
         'aaditri', 'aanya', 'aishani', 'aryaman', 'avika', 'deeksha',
         'hrishik', 'jayanti', 'krish', 'manasvi', 'prisha', 'shiven', 'sreeparna',
-        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vihaan', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal', 'shaurya'
+        'tanvi', 'tejas', 'vedant beriwal', 'vedant prakash', 'vivan', 'raghav', 'samaira', 'uma', 'prashali', 'jai', 'gaurang', 'sharanya', 'arunika', 'shreya', 'pratik', 'kunal', 'shaurya'
     ];
 
     const hasPhoto = (name) => {
@@ -63,7 +63,6 @@ const Secretariat = () => {
 
         // Indian Committee Directors
         { role: 'Indian Committee', name: 'Aryaman Pragya', row: 10 },
-        { role: 'Indian Committee', name: 'Vihaan Rustagi', row: 10 },
 
         // Crisis Committee Directors
         { role: 'Crisis Committee', name: 'Krish Aggarwal', row: 11 },

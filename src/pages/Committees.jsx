@@ -44,8 +44,7 @@ const Committees = () => {
             logo: '/committees/Logos/LokSabha.jpeg',
             logoStyle: 'cover',
             directors: [
-                { name: 'Aryaman Pragya' },
-                { name: 'Vihaan Rustagi' }
+                { name: 'Aryaman Pragya' }
             ],
 
         },
