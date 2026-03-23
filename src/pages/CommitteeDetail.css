@@ -49,6 +49,17 @@
     padding: 0;
 }
 
+.committee-detail-hero__logo-wrapper--cover-large {
+    background-color: transparent;
+}
+
+.committee-detail-hero__logo-wrapper--cover-large .committee-detail-hero__logo-img {
+    object-fit: cover;
+    object-position: center center;
+    padding: 0;
+    transform: scale(1.3);
+}
+
 .committee-detail-hero::after {
     content: '';
     position: absolute;

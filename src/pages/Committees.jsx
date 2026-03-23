@@ -52,7 +52,7 @@ const Committees = () => {
             id: 'crisis-committee',
             name: 'Ad-Hoc Crisis Committee',
             logo: '/committees/Logos/Adhoc.png',
-            logoStyle: 'cover',
+            logoStyle: 'cover-large',
             directors: [
                 { name: 'Krish Aggarwal' },
                 { name: 'Manasvi Bhambani' }

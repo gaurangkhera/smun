@@ -127,7 +127,7 @@ const CommitteeDetail = () => {
             name: 'Ad-Hoc Committee',
             shortName: 'Ad-Hoc Crisis Committee',
             logo: '/committees/Logos/Adhoc.png',
-            logoStyle: 'cover',
+            logoStyle: 'cover-large',
             directors: [
                 { name: 'Manasvi Bhambani' },
                 { name: 'Krish Aggarwal' }

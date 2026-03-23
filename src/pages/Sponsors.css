@@ -93,6 +93,56 @@
     height: 100px;
 }
 
+.sponsor-tier__grid--merchandise-partner .sponsor-logo {
+    width: auto;
+    height: auto;
+    max-width: clamp(300px, 90vw, 900px);
+    padding: var(--space-4);
+}
+
+.sponsor-tier__grid--merchandise-partner .sponsor-logo img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+}
+
+.sponsor-tier__grid--merchandise-partner .sponsor-card__name {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom: var(--space-2);
+}
+
+/* Sponsor Card */
+.sponsor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.sponsor-card__name {
+    font-size: var(--text-xl);
+    color: var(--color-orange);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding-bottom: var(--space-2);
+}
+
+.sponsor-card__name::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-orange);
+    border-radius: 2px;
+}
+
 /* Sponsor Logo */
 .sponsor-logo {
     display: flex;

@@ -4,27 +4,9 @@ const Sponsors = () => {
     // Placeholder sponsors - to be replaced with actual sponsors
     const sponsorTiers = [
         {
-            tier: 'Platinum Partners',
+            tier: 'Merchandise Partner',
             sponsors: [
-                { name: 'Sponsor 1', logo: null },
-                { name: 'Sponsor 2', logo: null },
-            ],
-        },
-        {
-            tier: 'Gold Partners',
-            sponsors: [
-                { name: 'Sponsor 3', logo: null },
-                { name: 'Sponsor 4', logo: null },
-                { name: 'Sponsor 5', logo: null },
-            ],
-        },
-        {
-            tier: 'Silver Partners',
-            sponsors: [
-                { name: 'Sponsor 6', logo: null },
-                { name: 'Sponsor 7', logo: null },
-                { name: 'Sponsor 8', logo: null },
-                { name: 'Sponsor 9', logo: null },
+                { name: 'Merrakii', logo: '/sponsors/merrakii.jpeg' },
             ],
         },
     ];
@@ -55,7 +37,7 @@ const Sponsors = () => {
                     <span className="sponsors-hero__eyebrow font-accent">Our Partners in Excellence</span>
                     <h1 className="sponsors-hero__title">Sponsors</h1>
                     <p className="sponsors-hero__subtitle">
-                        We extend our gratitude to the organizations that make SMUN possible through
+                        We extend our gratitude to the organizations that make Sanskriti MUN possible through
                         their generous support and commitment to youth leadership development.
                     </p>
                 </div>
@@ -66,22 +48,27 @@ const Sponsors = () => {
                 <div className="container">
                     {sponsorTiers.map((tierGroup, tierIndex) => (
                         <div key={tierIndex} className="sponsor-tier">
-                            <div className="sponsor-tier__header">
-                                <div className="sponsor-tier__line"></div>
-                                <h2 className="sponsor-tier__title font-accent">{tierGroup.tier}</h2>
-                                <div className="sponsor-tier__line"></div>
-                            </div>
+                            {tierGroup.tier !== 'Merchandise Partner' && (
+                                <div className="sponsor-tier__header">
+                                    <div className="sponsor-tier__line"></div>
+                                    <h2 className="sponsor-tier__title font-accent">{tierGroup.tier}</h2>
+                                    <div className="sponsor-tier__line"></div>
+                                </div>
+                            )}
 
                             <div className={`sponsor-tier__grid sponsor-tier__grid--${tierGroup.tier.toLowerCase().replace(' ', '-')}`}>
                                 {tierGroup.sponsors.map((sponsor, index) => (
-                                    <div key={index} className="sponsor-logo">
-                                        {sponsor.logo ? (
-                                            <img src={sponsor.logo} alt={sponsor.name} />
-                                        ) : (
-                                            <div className="sponsor-logo__placeholder">
-                                                <span className="sponsor-logo__placeholder-text">{sponsor.name}</span>
-                                            </div>
-                                        )}
+                                    <div key={index} className="sponsor-card">
+                                        <h3 className="sponsor-card__name font-accent">{sponsor.name}</h3>
+                                        <div className="sponsor-logo">
+                                            {sponsor.logo ? (
+                                                <img src={sponsor.logo} alt={sponsor.name} />
+                                            ) : (
+                                                <div className="sponsor-logo__placeholder">
+                                                    <span className="sponsor-logo__placeholder-text">{sponsor.name}</span>
+                                                </div>
+                                            )}
+                                        </div>
                                     </div>
                                 ))}
                             </div>
