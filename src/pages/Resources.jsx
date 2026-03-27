@@ -2,17 +2,17 @@ import './Resources.css';
 
 const Resources = () => {
     const committees = [
-        { id: 'general-assembly', name: 'The Disarmament and International Security Committee (DISEC)', bgGuide: '/background_guides/DISEC Background Guide - 2026 (1).pdf', procGuide: '/procedural_guides/Committee Procedure GA-DISEC 2026.pdf' },
-        { id: 'humanitarian-committee', name: 'Advisory Commission of UNRWA', bgGuide: '/background_guides/Humanitarian Background Guide.pdf', procGuide: '/procedural_guides/ROP - AdCom UNRWA (1).pdf' },
-        { id: 'un-security-council', name: 'UN Futuristic Security Council', bgGuide: '/background_guides/UNSC Background Guide .pdf', procGuide: '/procedural_guides/UNFSC Paperwork and Procedure Guide.pdf' },
-        { id: 'indian-committee', name: 'The 13th Lok Sabha', bgGuide: '/background_guides/Background Guide - 13th Lok Sabha-3.pdf', procGuide: '/procedural_guides/Procedural Guide 13th Lok Sabha.pdf' },
+        { id: 'general-assembly', name: 'The Disarmament and International Security Committee (DISEC)', bgGuide: '/background_guides/disec-bg.pdf', procGuide: '/procedural_guides/disec-proc.pdf' },
+        { id: 'humanitarian-committee', name: 'Advisory Commission of UNRWA', bgGuide: '/background_guides/humanitarian-bg.pdf', procGuide: '/procedural_guides/humanitarian-proc.pdf' },
+        { id: 'un-security-council', name: 'UN Futuristic Security Council', bgGuide: '/background_guides/unsc-bg.pdf', procGuide: '/procedural_guides/unsc-proc.pdf' },
+        { id: 'indian-committee', name: 'The 13th Lok Sabha', bgGuide: '/background_guides/lok-sabha-bg.pdf', procGuide: '/procedural_guides/lok-sabha-proc.pdf' },
         { id: 'crisis-committee', name: 'Ad-Hoc Crisis Committee', bgGuide: null, procGuide: null },
-        { id: 'semi-crisis-committee', name: 'The Cognac Strategic Conclave', bgGuide: '/background_guides/Semi Crisis Background Guide_CSC.pdf', procGuide: '/procedural_guides/Semi Crisis Procedure Guide .pdf' },
-        { id: 'specialised-committee', name: 'The 110th United States Senate', bgGuide: '/background_guides/Specialised NEW BGG.pdf', procGuide: '/procedural_guides/FINAL - PROCEDURE AND PPW-2.pdf' },
+        { id: 'semi-crisis-committee', name: 'The Cognac Strategic Conclave', bgGuide: '/background_guides/csc-bg.pdf', procGuide: '/procedural_guides/csc-proc.pdf' },
+        { id: 'specialised-committee', name: 'The 110th United States Senate', bgGuide: '/background_guides/senate-bg.pdf', procGuide: '/procedural_guides/final-proc.pdf' },
         { id: 'justice-committee', name: 'The Tribunal of the Fallen Sun', bgGuide: null, procGuide: null },
-        { id: 'unca-journalism', name: 'UNCA Journalism', bgGuide: '/background_guides/UNCA-Journalism _ Background Guide _ Inter SMUN 26.pdf', procGuide: '/procedural_guides/UNCA-Journalism _ Paperwork and Procedural Guide _ Inter SMUN 26.pdf' },
-        { id: 'unca-photography', name: 'UNCA Photography', bgGuide: '/background_guides/UNCA-Photography _ Background Guide _ Inter SMUN 26.pdf', procGuide: '/procedural_guides/UNCA-Photography Procedural Guidelines.pdf' },
-        { id: 'unca-cartoonists', name: 'UNCA Cartoonists', bgGuide: '/background_guides/UNCA-C _ Background Guide _  SMUN 26.pdf', procGuide: '/procedural_guides/Paperwork and Procedural Guidelines_UNCAC.pdf' }
+        { id: 'unca-journalism', name: 'UNCA Journalism', bgGuide: '/background_guides/unca-journalism-bg.pdf', procGuide: '/procedural_guides/unca-journalism-proc.pdf' },
+        { id: 'unca-photography', name: 'UNCA Photography', bgGuide: '/background_guides/unca-photography-bg.pdf', procGuide: '/procedural_guides/unca-photography-proc.pdf' },
+        { id: 'unca-cartoonists', name: 'UNCA Cartoonists', bgGuide: '/background_guides/unca-cartoonists-bg.pdf', procGuide: '/procedural_guides/unca-cartoonists-proc.pdf' }
     ];
 
     return (

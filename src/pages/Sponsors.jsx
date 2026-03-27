@@ -86,7 +86,7 @@ const Sponsors = () => {
                             <h2 className="become-sponsor__title">Become a Sponsor</h2>
                             <p className="become-sponsor__description">
                                 Join our community of forward-thinking organizations supporting the next
-                                generation of global leaders. Explore sponsorship opportunities for SMUN 2025.
+                                generation of global leaders. Explore sponsorship opportunities for SMUN 2026.
                             </p>
 
                             <div className="sponsor-benefits">
@@ -100,10 +100,6 @@ const Sponsors = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            <a href="mailto:munsanskritischool@gmail.com" className="btn btn-primary">
-                                Request Sponsorship Package
-                            </a>
                         </div>
 
                         <div className="become-sponsor__decoration">
@@ -113,7 +109,7 @@ const Sponsors = () => {
                                 <div className="sponsor-decoration__ring sponsor-decoration__ring--3"></div>
                                 <div className="sponsor-decoration__center">
                                     <span>SMUN</span>
-                                    <span>2025</span>
+                                    <span>2026</span>
                                 </div>
                             </div>
                         </div>

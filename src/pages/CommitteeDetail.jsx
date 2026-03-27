@@ -44,8 +44,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Ishi Bhaskar', 'Varenya Shekhar', 'Kiaan Uppal'],
             email: 'unga2026.smun@gmail.com',
-            bgGuide: '/background_guides/DISEC Background Guide - 2026 (1).pdf',
-            procGuide: '/procedural_guides/Committee Procedure GA-DISEC 2026.pdf',
+            bgGuide: '/background_guides/disec-bg.pdf',
+            procGuide: '/procedural_guides/disec-proc.pdf',
             agenda: 'Addressing the Instability in the Democratic Republic of Congo during "Africa\'s World War" Following the Assassination of Laurent Kabila and Foreign Military Interventions',
             freezeDate: '18th January, 2001',
 
@@ -70,8 +70,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Aryav Sachan', 'Avyukt Prasad', 'Divispruk Kapoor'],
             email: 'unrwa2026.smun@gmail.com',
-            bgGuide: '/background_guides/Humanitarian Background Guide.pdf',
-            procGuide: '/procedural_guides/ROP - AdCom UNRWA (1).pdf',
+            bgGuide: '/background_guides/humanitarian-bg.pdf',
+            procGuide: '/procedural_guides/humanitarian-proc.pdf',
             agenda: 'Safeguarding Humanitarian Corridors in Active Conflict Zones While Upholding Neutrality and International Humanitarian Law aimed to address all forms of Violence with a Special Emphasis on the Palestinian Refugees in the Near East',
 
             writeup: [
@@ -93,8 +93,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Gauri Tiwari', 'Kanav Rakheja', 'Ishaan Kapoor'],
             email: 'unsc2026.smun@gmail.com',
-            bgGuide: '/background_guides/UNSC Background Guide .pdf',
-            procGuide: '/procedural_guides/UNFSC Paperwork and Procedure Guide.pdf',
+            bgGuide: '/background_guides/unsc-bg.pdf',
+            procGuide: '/procedural_guides/unsc-proc.pdf',
             agenda: 'The situation in Greenland, 2039',
             dateOfConvening: 'July 27, 2039',
             freezeDate: 'January 1, 2026',
@@ -118,8 +118,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Adidev Singh', 'Auraj Razdan', 'Ruhaan Gaggar'],
             email: 'ssloksabha2026.smun@gmail.com',
-            bgGuide: '/background_guides/Background Guide - 13th Lok Sabha-3.pdf',
-            procGuide: '/procedural_guides/Procedural Guide 13th Lok Sabha.pdf',
+            bgGuide: '/background_guides/lok-sabha-bg.pdf',
+            procGuide: '/procedural_guides/lok-sabha-proc.pdf',
             agenda: 'Reckoning with the Attack on the Indian Parliament and the Republic\'s Demand for the Prevention of Terrorism Act',
             freezeDate: 'December 18, 2001',
 
@@ -173,8 +173,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Madhav Gopal Kamath', 'Vinaayak Banerjee'],
             email: 'csc2026.smun@gmail.com',
-            bgGuide: '/background_guides/Semi Crisis Background Guide_CSC.pdf',
-            procGuide: '/procedural_guides/Semi Crisis Procedure Guide .pdf',
+            bgGuide: '/background_guides/csc-bg.pdf',
+            procGuide: '/procedural_guides/csc-proc.pdf',
             agenda: 'The Italian Renaissance Wars: The Defence of Italian City-States Against the Spanish-Habsburg Alliance',
             freezeDate: 'September 1st, 1526',
             writeup: [
@@ -196,8 +196,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Aarav Mishra', 'Arnav Gupta'],
             email: 'ussenate2026.smun@gmail.com',
-            bgGuide: '/background_guides/Specialised NEW BGG.pdf',
-            procGuide: '/procedural_guides/FINAL - PROCEDURE AND PPW-2.pdf',
+            bgGuide: '/background_guides/senate-bg.pdf',
+            procGuide: '/procedural_guides/final-proc.pdf',
             agenda: 'The 2008 Financial Crisis (Addressing the 2008 Financial Fallout and Formulating Urgent National Strategies to Restore National Economic Stability)',
             freezeDate: 'September 16th 2008, 11:59pm',
 
@@ -240,8 +240,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Sharadha K.V.', 'Disha Karmarkar'],
             email: 'uncajournalism2026.smun@gmail.com',
-            bgGuide: '/background_guides/UNCA-Journalism _ Background Guide _ Inter SMUN 26.pdf',
-            procGuide: '/procedural_guides/UNCA-Journalism _ Paperwork and Procedural Guide _ Inter SMUN 26.pdf',
+            bgGuide: '/background_guides/unca-journalism-bg.pdf',
+            procGuide: '/procedural_guides/unca-journalism-proc.pdf',
             agenda: [
                 'Reporting on the Conference.',
                 'Analysing the role of media in the Arab Spring with a special emphasis on the Tunisian revolution in light of the media blackout following the self-immolation of Mohamed Bouazizi.'
@@ -269,8 +269,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Amyra Rachel Solomon'],
             email: 'uncap2026.smun@gmail.com',
-            bgGuide: '/background_guides/UNCA-Photography _ Background Guide _ Inter SMUN 26.pdf',
-            procGuide: '/procedural_guides/UNCA-Photography Procedural Guidelines.pdf',
+            bgGuide: '/background_guides/unca-photography-bg.pdf',
+            procGuide: '/procedural_guides/unca-photography-proc.pdf',
             agenda: 'Immortalising the Conference: Capturing Debates and Turning Moments into Legacies',
 
             writeup: [
@@ -293,8 +293,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Yehom Konwar Gogoi'],
             email: 'Uncac2026.smun@gmail.com',
-            bgGuide: '/background_guides/UNCA-C _ Background Guide _  SMUN 26.pdf',
-            procGuide: '/procedural_guides/Paperwork and Procedural Guidelines_UNCAC.pdf',
+            bgGuide: '/background_guides/unca-cartoonists-bg.pdf',
+            procGuide: '/procedural_guides/unca-cartoonists-proc.pdf',
             agenda: [
                 'Reporting on the Conference Through Political Cartooning.',
                 'Deliberating on the State Retaliation and the Threats to Press Freedom Faced by Journalists in the Aftermath of the Panama Papers.'
