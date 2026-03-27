@@ -1,0 +1,136 @@
+/* ===================================
+   Resources Hero
+   =================================== */
+.resources-hero {
+    padding: var(--space-32) 0 var(--space-16);
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-navy-medium) 0%, var(--color-navy-deep) 100%);
+    position: relative;
+}
+
+.resources-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-orange), transparent);
+}
+
+.resources-hero__title {
+    font-size: var(--text-5xl);
+    color: var(--color-cream);
+    margin-bottom: var(--space-4);
+}
+
+.resources-hero__subtitle {
+    font-family: var(--font-accent);
+    font-size: var(--text-lg);
+    letter-spacing: 0.1em;
+    color: var(--color-orange);
+}
+
+/* ===================================
+   Resources Grid
+   =================================== */
+.resources-content {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-8);
+}
+
+/* Resource Card */
+.resource-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    padding: var(--space-8);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.resource-card:hover {
+    border-color: rgba(224, 116, 40, 0.3);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.resource-card__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--color-cream);
+    margin-bottom: var(--space-6);
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Resource Buttons */
+.resource-card__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: auto;
+}
+
+.resource-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3) var(--space-4);
+    font-family: var(--font-accent);
+    font-size: var(--text-sm);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+    width: 100%;
+}
+
+.resource-btn--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.resource-btn {
+    background: rgba(224, 116, 40, 0.1);
+    color: var(--color-orange);
+    border: 1px solid rgba(224, 116, 40, 0.3);
+}
+
+.resource-btn:not(.resource-btn--disabled):hover {
+    background: rgba(224, 116, 40, 0.2);
+    border-color: var(--color-orange);
+}
+
+.resource-btn--secondary {
+    background: transparent;
+    color: var(--color-cream);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.resource-btn--secondary:not(.resource-btn--disabled):hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: var(--color-cream);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .resources-hero__title {
+        font-size: var(--text-4xl);
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}

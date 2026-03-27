@@ -7,6 +7,7 @@ import Committees from './pages/Committees';
 import CommitteeDetail from './pages/CommitteeDetail';
 import Contact from './pages/Contact';
 import Sponsors from './pages/Sponsors';
+import Resources from './pages/Resources';
 import ConferenceDetails from './pages/ConferenceDetails';
 import Letter from './pages/Letter';
 import Registration from './pages/Registration';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/conference-details" element={<ConferenceDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/letter/:role" element={<Letter />} />
         </Routes>
