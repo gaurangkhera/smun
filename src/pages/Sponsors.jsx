@@ -76,46 +76,6 @@ const Sponsors = () => {
                     ))}
                 </div>
             </section>
-
-            {/* Become a Sponsor CTA */}
-            <section className="become-sponsor section">
-                <div className="container">
-                    <div className="become-sponsor__content">
-                        <div className="become-sponsor__text">
-                            <span className="become-sponsor__eyebrow font-accent">Partner With Us</span>
-                            <h2 className="become-sponsor__title">Become a Sponsor</h2>
-                            <p className="become-sponsor__description">
-                                Join our community of forward-thinking organizations supporting the next
-                                generation of global leaders. Explore sponsorship opportunities for SMUN 2026.
-                            </p>
-
-                            <div className="sponsor-benefits">
-                                {benefits.map((benefit, index) => (
-                                    <div key={index} className="sponsor-benefit">
-                                        <span className="sponsor-benefit__icon">{benefit.icon}</span>
-                                        <div>
-                                            <h4>{benefit.title}</h4>
-                                            <p>{benefit.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="become-sponsor__decoration">
-                            <div className="sponsor-decoration">
-                                <div className="sponsor-decoration__ring sponsor-decoration__ring--1"></div>
-                                <div className="sponsor-decoration__ring sponsor-decoration__ring--2"></div>
-                                <div className="sponsor-decoration__ring sponsor-decoration__ring--3"></div>
-                                <div className="sponsor-decoration__center">
-                                    <span>SMUN</span>
-                                    <span>2026</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 };

@@ -38,6 +38,20 @@ const ConferenceDetails = () => {
                                 Register Now
                             </Link>
                         </div>
+
+                        {/* Itinerary Button */}
+                        <div className="action-card">
+                            <h2>Itinerary</h2>
+                            <p>View the full schedule and events for the conference.</p>
+                            <a 
+                                href="/itinerary.pdf" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="btn btn-primary"
+                            >
+                                View Itinerary
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
