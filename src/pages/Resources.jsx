@@ -9,7 +9,7 @@ const Resources = () => {
         { id: 'crisis-committee', name: 'Ad-Hoc Crisis Committee', bgGuide: null, procGuide: null },
         { id: 'semi-crisis-committee', name: 'The Cognac Strategic Conclave', bgGuide: '/background_guides/csc-bg.pdf', procGuide: '/procedural_guides/csc-proc.pdf' },
         { id: 'specialised-committee', name: 'The 110th United States Senate', bgGuide: '/background_guides/senate-bg.pdf', procGuide: '/procedural_guides/final-proc.pdf' },
-        { id: 'justice-committee', name: 'The Tribunal of the Fallen Sun', combinedGuide: '/justice-bgg.pdf' },
+        { id: 'justice-committee', name: 'The Tribunal of the Fallen Sun', bgGuide: '/background_guides/justice-bg.pdf', procGuide: '/procedural_guides/justice-proc.pdf' },
         { id: 'unca-journalism', name: 'UNCA Journalism', bgGuide: '/background_guides/unca-journalism-bg.pdf', procGuide: '/procedural_guides/unca-journalism-proc.pdf' },
         { id: 'unca-photography', name: 'UNCA Photography', bgGuide: '/background_guides/unca-photography-bg.pdf', procGuide: '/procedural_guides/unca-photography-proc.pdf' },
         { id: 'unca-cartoonists', name: 'UNCA Cartoonists', bgGuide: '/background_guides/unca-cartoonists-bg.pdf', procGuide: '/procedural_guides/unca-cartoonists-proc.pdf' }

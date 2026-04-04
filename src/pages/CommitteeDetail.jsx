@@ -220,7 +220,8 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Aarav Gupta', 'Aashi Chaure', 'Jaivir Dhingra'],
             email: 'tjc2026.smun@gmail.com',
-            combinedGuide: '/justice-bgg.pdf',
+            bgGuide: '/background_guides/justice-bg.pdf',
+            procGuide: '/procedural_guides/justice-proc.pdf',
             agenda: 'The Tokyo Trials, following Japan\'s surrender in World War 2, August 1945',
             freezeDate: '20 August 1945 (5 days after Japan\'s unsigned surrender) ',
             writeup: [
