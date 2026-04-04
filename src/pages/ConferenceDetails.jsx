@@ -52,6 +52,20 @@ const ConferenceDetails = () => {
                                 View Itinerary
                             </a>
                         </div>
+
+                        {/* Conference Policy Button */}
+                        <div className="action-card">
+                            <h2>Conference Policy</h2>
+                            <p>Review the official guidelines and policies for SMUN 2026.</p>
+                            <a 
+                                href="/conf_policy.pdf" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="btn btn-primary"
+                            >
+                                View Policy
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -47,12 +47,6 @@
     .conference-actions {
         grid-template-columns: 1fr 1fr;
     }
-    
-    .action-card:last-child:nth-child(odd) {
-        grid-column: 1 / -1;
-        width: calc(50% - var(--space-4));
-        margin: 0 auto;
-    }
 }
 
 .action-card {

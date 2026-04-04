@@ -220,6 +220,7 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Aarav Gupta', 'Aashi Chaure', 'Jaivir Dhingra'],
             email: 'tjc2026.smun@gmail.com',
+            combinedGuide: '/justice-bgg.pdf',
             agenda: 'The Tokyo Trials, following Japan\'s surrender in World War 2, August 1945',
             freezeDate: '20 August 1945 (5 days after Japan\'s unsigned surrender) ',
             writeup: [
@@ -444,29 +445,43 @@ const CommitteeDetail = () => {
                         )}
                     </div>
 
-                    {(committee.bgGuide || committee.procGuide) && (
+                    {(committee.bgGuide || committee.procGuide || committee.combinedGuide) && (
                         <div className="committee-resources-links" style={{ marginBottom: '3rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            {committee.bgGuide && (
+                            {committee.combinedGuide ? (
                                 <a 
-                                    href={committee.bgGuide} 
+                                    href={committee.combinedGuide} 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="resource-btn"
                                     style={{ width: 'auto', minWidth: '280px', padding: '1rem 2rem' }}
                                 >
-                                    Background Guide
+                                    Background & Procedure Guide
                                 </a>
-                            )}
-                            {committee.procGuide && (
-                                <a 
-                                    href={committee.procGuide} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="resource-btn resource-btn--secondary"
-                                    style={{ width: 'auto', minWidth: '280px', padding: '1rem 2rem' }}
-                                >
-                                    Paperwork & Procedure Guide
-                                </a>
+                            ) : (
+                                <>
+                                    {committee.bgGuide && (
+                                        <a 
+                                            href={committee.bgGuide} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="resource-btn"
+                                            style={{ width: 'auto', minWidth: '280px', padding: '1rem 2rem' }}
+                                        >
+                                            Background Guide
+                                        </a>
+                                    )}
+                                    {committee.procGuide && (
+                                        <a 
+                                            href={committee.procGuide} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="resource-btn resource-btn--secondary"
+                                            style={{ width: 'auto', minWidth: '280px', padding: '1rem 2rem' }}
+                                        >
+                                            Paperwork & Procedure Guide
+                                        </a>
+                                    )}
+                                </>
                             )}
                         </div>
                     )}
