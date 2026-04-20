@@ -7,7 +7,7 @@ const Resources = () => {
         { id: 'un-security-council', name: 'UN Futuristic Security Council', bgGuide: '/background_guides/unsc-bg.pdf', procGuide: '/procedural_guides/unsc-proc.pdf' },
         { id: 'indian-committee', name: 'The 13th Lok Sabha', bgGuide: '/background_guides/lok-sabha-bg.pdf', procGuide: '/procedural_guides/lok-sabha-proc.pdf' },
         { id: 'crisis-committee', name: 'Ad-Hoc Crisis Committee', bgGuide: null, procGuide: null },
-        { id: 'semi-crisis-committee', name: 'The Cognac Strategic Conclave', bgGuide: '/background_guides/csc-bg.pdf', procGuide: '/procedural_guides/csc-proc.pdf' },
+        { id: 'semi-crisis-committee', name: 'The Cognac Strategic Conclave', bgGuide: '/background_guides/semi-bg.pdf', procGuide: '/procedural_guides/csc-proc.pdf' },
         { id: 'specialised-committee', name: 'The 110th United States Senate', bgGuide: '/background_guides/senate-bg.pdf', procGuide: '/procedural_guides/final-proc.pdf' },
         { id: 'justice-committee', name: 'The Tribunal of the Fallen Sun', bgGuide: '/background_guides/justice-bg.pdf', procGuide: '/procedural_guides/justice-proc.pdf' },
         { id: 'unca-journalism', name: 'UNCA Journalism', bgGuide: '/background_guides/unca-journalism-bg.pdf', procGuide: '/procedural_guides/unca-journalism-proc.pdf' },
