@@ -144,6 +144,7 @@ const CommitteeDetail = () => {
             additionalDirectors: ['Savya Karri', 'Raaga Varunika', 'Eira Jha'],
             email: 'adhoc2026.smun@gmail.com',
             bgGuide: '/background_guides/crisis-bg.pdf',
+            procGuide: '/procedural_guides/crisis-proc.pdf',
             agenda: 'Classified',
             writeup: [
                 `The Ad-Hoc Committee of Sanskriti Model United Nations will provide the delegates with an immersive experience into a world of chaos and conflict. The committee will move at a fast pace, requiring the delegates to be creative and willing to take high stakes decisions.`,
