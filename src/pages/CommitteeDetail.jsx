@@ -143,6 +143,7 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Savya Karri', 'Raaga Varunika', 'Eira Jha'],
             email: 'adhoc2026.smun@gmail.com',
+            bgGuide: '/background_guides/crisis-bg.pdf',
             agenda: 'Classified',
             writeup: [
                 `The Ad-Hoc Committee of Sanskriti Model United Nations will provide the delegates with an immersive experience into a world of chaos and conflict. The committee will move at a fast pace, requiring the delegates to be creative and willing to take high stakes decisions.`,
@@ -173,7 +174,7 @@ const CommitteeDetail = () => {
             ],
             additionalDirectors: ['Madhav Gopal Kamath', 'Vinaayak Banerjee'],
             email: 'csc2026.smun@gmail.com',
-            bgGuide: '/background_guides/semi-bg.pdf',
+            bgGuide: '/background_guides/csc-bg.pdf',
             procGuide: '/procedural_guides/csc-proc.pdf',
             agenda: 'The Italian Renaissance Wars: The Defence of Italian City-States Against the Spanish-Habsburg Alliance',
             freezeDate: 'September 1st, 1526',
